@@ -8,7 +8,7 @@
 
 **iomem.txt** get the /proc/iomem in qemu guest machine
 
-**gdb.txt** this is the gdb logging file.
+**gdb.txt** will be created after the execution of **gdb.py**. It is the gdb logging file.
 
 **gdb.sh** will be execute by gdb.py using python3 `subprocess.run()`
 
