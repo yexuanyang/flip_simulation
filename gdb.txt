@@ -1,0 +1,4623 @@
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0x0000007f8f408370 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x59fc6801:	0x00000000
+0x59fc6801:	0x00000080
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0x0000007fbb105cf0 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x571759a3:	0x00000000
+0x571759a3:	0x00000008
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0x0000007fbb3e4cac in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x40dcdadf:	0x00032891
+0x40dcdadf:	0x00032811
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0x0000007fb8a88dc4 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x417c41f4:	0x00000000
+0x417c41f4:	0x00000001
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0x0000007fbe3d411c in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x523c62a2:	30
+0x523c62a2:	28
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0x0000007fadae4440 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x405c7550:	-3
+0x405c7550:	-67
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc010010c00 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x416dabc3:	0
+0x416dabc3:	8
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0x0000007fb3297dd8 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x43e89773:	0xd2
+0x43e89773:	0xd3
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc0103038ec in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x40a780ac:	0x58
+0x40a780ac:	0x78
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0x0000007fbb4369d8 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x416d6d04:	0x7b
+0x416d6d04:	0x5b
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc010010c00 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x57f8b76e:	0x00
+0x57f8b76e:	0x40
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0x000000558c8388e4 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x402c8ea4:	0xe8
+0x402c8ea4:	0x68
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0x0000007fba9a7ac0 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x418b8746:	0x00
+0x418b8746:	0x40
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0x0000007fa535f6dc in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x56a73155:	0x00
+0x56a73155:	0x40
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0x0000007fb451d1e4 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x40d72d4e:	0x00
+0x40d72d4e:	0x80
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0x0000007f8a288bdc in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x418ad554:	0x00
+0x418ad554:	0x40
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0x0000007fa5f28e08 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x46f9440d:	0x7e
+0x46f9440d:	0xfe
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc010010c00 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x406b4ba8:	0x1f
+0x406b4ba8:	0x1b
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0x0000007f91356664 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x417fd5f2:	0x00
+0x417fd5f2:	0x01
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc010010c00 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x62c98f14:	0x00
+0x62c98f14:	0x04
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc010010c00 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x405cc8df:	0x17
+0x405cc8df:	0x13
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0x0000007f8cf68f20 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x418b6ac2:	0x00
+0x418b6ac2:	0x02
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc010010c00 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x44dbe69c:	0x00
+0x44dbe69c:	0x40
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0x0000007f870b7584 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x4097f328:	0x48
+0x4097f328:	0x4a
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0x0000007f98572040 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x416e3ffc:	0x00
+0x416e3ffc:	0x10
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc010010c00 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x4056991a:	0x24
+0x4056991a:	0x2c
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc01018b950 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x4138517b:	0x00
+0x4138517b:	0x10
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0x0000007fa9d60954 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x4184ad3d:	0x00
+0x4184ad3d:	0x08
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc010010c00 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x7d4f0f15:	0x00
+0x7d4f0f15:	0x04
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0x0000007f94e72edc in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x4073bb1b:	0xb4
+0x4073bb1b:	0xa4
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0x0000007fa27db840 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x4174c4f9:	0x00
+0x4174c4f9:	0x02
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc010a39cd4 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x5f6be52c:	0x00
+0x5f6be52c:	0x10
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0x0000007fb6135de0 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x40fa4acf:	0x00
+0x40fa4acf:	0x02
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0x0000007f8ce1c680 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x417f2f04:	0x00
+0x417f2f04:	0x02
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc010010c00 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x5333d17e:	0x00
+0x5333d17e:	0x10
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc010010c00 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x40997bdc:	0x40
+0x40997bdc:	0x48
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0x0000007fbb53ffd0 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x416b6b16:	0xff
+0x416b6b16:	0xf7
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0x000000559017fcc4 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x776cb9d1:	0x00
+0x776cb9d1:	0x02
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc01018b950 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x6ddc88b2:	0x00
+0x6ddc88b2:	0x80
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0x0000007fbd355f20 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x4044225a:	0x40
+0x4044225a:	0xc0
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0x0000005587147374 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x416d96ec:	0x78
+0x416d96ec:	0x68
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0x0000007fb8446be0 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x59f720d0:	0x00
+0x59f720d0:	0x01
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc010010c00 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x40693bf0:	0x04
+0x40693bf0:	0x24
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc01018b950 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x4177664f:	0xff
+0x4177664f:	0xfb
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0x0000007f972a8720 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x608e9538:	0x00
+0x608e9538:	0x20
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc0101167a8 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x4027e813:	0xf9
+0x4027e813:	0xd9
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0x0000007f9a028958 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x416df9e3:	0x61
+0x416df9e3:	0x71
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0x0000007f99c47354 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x6d12239a:	0x00
+0x6d12239a:	0x08
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0x0000007fa33e079c in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x40b691ae:	0x13
+0x40b691ae:	0x53
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0x0000007fa3373afc in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x4180f34e:	0x00
+0x4180f34e:	0x08
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc01018b950 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x45250c61:	0x00
+0x45250c61:	0x01
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0x0000007f871e0e10 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x40307d2e:	0xff
+0x40307d2e:	0xbf
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0x0000007f87832d38 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x4166942b:	0x00
+0x4166942b:	0x80
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0x00000055917cddd4 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x57bd7660:	0x00
+0x57bd7660:	0x02
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0x0000007f83d4bb54 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x4046592c:	0x36
+0x4046592c:	0x26
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0x0000007f959da880 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x4182d8d2:	0x00
+0x4182d8d2:	0x20
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0x0000007fa2b87088 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x5debc2d0:	0x00
+0x5debc2d0:	0x20
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0x0000007fa2819f2c in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x413ee0b4:	0x5f
+0x413ee0b4:	0xdf
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc01018b950 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x41831053:	0x00
+0x41831053:	0x40
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc010a39cd4 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x41831053:	0x40
+0x41831053:	0x00
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc010150f84 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x78163d76:	0x00
+warning: Expression is not an assignment (and might have no effect)
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc010a39cb0 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x4176e37d:	0x01
+0x4176e37d:	0x09
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc010a39994 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x53e3378a:	0x00
+0x53e3378a:	0x02
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc010a39994 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x41812a2b:	0x00
+0x41812a2b:	0x20
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc0102d9324 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x41812a2b:	0x20
+0x788a6479:	0x00
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc01001f8dc in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x41709d1c:	0x00
+0x41709d1c:	0x04
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc01045eccc in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x416232e6:	0x00
+0x416232e6:	0x80
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc010339f0c in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x416232e6:	0x80
+0x416232e6:	0x00
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc010010c00 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x4180e4c7:	0x00
+0x4180e4c7:	0x10
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc01073ee30 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x4180e4c7:	0x10
+0x4180e4c7:	0x00
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc010012cf4 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x41042c6e:	0xd9
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc010474988 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x41702e94:	0xc0
+0x41702e94:	0xc4
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0x000000555d7f3698 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x41783362:	0xb7
+0x41783362:	0xb5
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0x0000007fa8ac2510 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x41783362:	0xb5
+0x41783362:	0xb7
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc01034dd20 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x418ad206:	0x00
+0x418ad206:	0x40
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc010a39cd4 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x418ad206:	0x40
+0x418ad206:	0x00
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc010a39cd4 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x4176290a:	0x39
+0x4176290a:	0x19
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc01012ff44 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x4176290a:	0x19
+0x4176290a:	0x39
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc010a39cd4 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x416d4c45:	0x00
+0x416d4c45:	0x10
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0x0000007fa89d7104 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x796bada1:	0x00
+0x796bada1:	0x10
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0x0000007fa89d771c in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x4175e770:	0xb0
+0x4175e770:	0x90
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0x0000007fa89d8230 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x4175e770:	0x90
+0x64387f24:	0x01
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0x0000007fa89d7ad4 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x416d5521:	0x00
+0x416d5521:	0x40
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0x0000007fa89d7b20 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x416d5521:	0x40
+0x416d5521:	0x00
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0x0000007fa89d7b20 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x4b0214e2:	0x74
+0x4b0214e2:	0x75
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc01001268c in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x41810fe1:	0x00
+0x41810fe1:	0x04
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc010a392f8 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x41810fe1:	0x04
+0x41810fe1:	0x00
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc01010f7c8 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x417fbe13:	0x00
+0x417fbe13:	0x02
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc010a39cd4 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x417fbe13:	0x02
+0x417fbe13:	0x00
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc010a39cd4 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x4186ce86:	0x00
+0x4186ce86:	0x04
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc01018b950 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x4186ce86:	0x04
+0x4186ce86:	0x00
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc010a39cd4 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x418599d5:	0x00
+0x418599d5:	0x04
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0x0000007fa8a05f2c in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x41832962:	0x00
+0x41832962:	0x40
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0x0000007fa89acf00 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x41832962:	0x40
+0x41832962:	0x00
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc010012758 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x6c51c485:	0x00
+0x409deb4d:	0x4f
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc0100101f8 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x4177322a:	0xdf
+0x4177322a:	0xdd
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc010a39cd4 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x4177322a:	0xdd
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc01010f7c8 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x41694a4a:	0x20
+0x41694a4a:	0xa0
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc010a39cd4 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x41694a4a:	0xa0
+0x41694a4a:	0x20
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc010a39cd4 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x4168c132:	0x4c
+0x4168c132:	0x0c
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc01018b950 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x4168c132:	0x0c
+0x4168c132:	0x4c
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc010a39cd4 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x4170be75:	0x00
+0x4170be75:	0x08
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc010a39cd4 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x4170be75:	0x08
+0x4170be75:	0x00
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc01014c938 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x6e13ef1f:	0x00
+0x6e13ef1f:	0x20
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc01014c938 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x417125b1:	0xce
+0x417125b1:	0xcf
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc010a39cd4 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x417125b1:	0xcf
+0x417125b2:	0xa2
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc010a39994 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x415ac163:	0x00
+0x415ac163:	0x02
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc0106d7690 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x415ac163:	0x02
+0x415ac163:	0x00
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc010010a80 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x415cead1:	0x00
+0x415cead1:	0x02
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc01010f7c8 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x415cead1:	0x02
+0x415cead1:	0x00
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc010a39cd4 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x416b09d4:	0xc0
+0x416b09d4:	0xe0
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc010a39cd4 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x416b09d4:	0xe0
+0x416b09d4:	0xc0
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc01018b950 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x4177084e:	0xcb
+0x4177084e:	0xc9
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc010a39cd4 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x4177084e:	0xc9
+0x4177084e:	0xcb
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc010a39cd4 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x77b2fecf:	0x00
+0x77b2fecf:	0x40
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc01013f7a8 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x418b4096:	0x00
+0x418b4096:	0x20
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc010a39cd4 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc010a399a0 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x4189a9fa:	0x00
+0x4189a9fa:	0x40
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc0106d7690 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x4106dc64:	0xfa
+0x4106dc64:	0xfb
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0x0000007fa89d310c in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x4174ce22:	0x1b
+0x4174ce22:	0x3b
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0x0000007fa89d2f14 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x6338dc47:	0x00
+0x6338dc47:	0x10
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0x0000007fa89cfc80 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x413e945c:	0x34
+0x417013dc:	0xc2
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0x0000007fa89cfccc in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x417013dc:	0xc2
+0x417013dc:	0xc0
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0x0000007fa89cfdd4 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x40d63311:	0x04
+0x40d63311:	0x84
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0x0000007fa89d0000 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x416196c9:	0x00
+0x416196c9:	0x01
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc010a39cd4 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x416196c9:	0x01
+0x411432b6:	0x8f
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc01015eabc in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x4171c937:	0xff
+0x4171c937:	0xbf
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc010a39cd4 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x4171c937:	0xbf
+0x4171c937:	0xff
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc010a39cd4 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x40843ae8:	0x68
+0x40843ae8:	0x6c
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc01018b950 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x41767a1b:	0x00
+0x41767a1b:	0x80
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc010a39cd4 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x41767a1b:	0x80
+0x41767a1b:	0x00
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc010149ff4 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x633b8e8f:	0x00
+0x633b8e8f:	0x08
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc010149ff4 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x415c4a2f:	0x00
+0x415c4a2f:	0x04
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0x0000007fa8996bd8 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x415c4a2f:	0x04
+0x415c4a2f:	0x00
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc010010c80 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x7fcae3fa:	0x20
+0x410f26e1:	0xb2
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc010a392f8 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x41647404:	0x5f
+0x41647404:	0x1f
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc010a39cd4 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x41647404:	0x1f
+0x41647404:	0x5f
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0x000000555d81cf00 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x408c2e66:	0x00
+0x408c2e66:	0x02
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc010010c80 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x4168034b:	0x52
+0x4168034b:	0x53
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc01001268c in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x4168034b:	0x53
+0x4168034b:	0x52
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc010012758 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x416b9692:	0x66
+0x416b9692:	0x64
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc010a392f8 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x416b9692:	0x64
+0x416b9692:	0x66
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc010139000 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x5bce00d3:	0x00
+0x40ca244a:	0x00
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc010a39cd4 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x4183835c:	0x00
+0x4183835c:	0x04
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc01001043c in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x4bfb9503:	0x00
+0x4bfb9503:	0x20
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0x000000555d7901c0 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x4176f7ad:	0x1c
+0x4176f7ad:	0x9c
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0x0000007fa8ac2440 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x417cdc47:	0x00
+0x417cdc47:	0x01
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc01013a430 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x417cdc47:	0x01
+0x417cdc47:	0x00
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc01013a430 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x6443b45c:	0x00
+0x6443b45c:	0x04
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc010160fe4 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x6443b45c:	0x04
+0x409d26fc:	0x9f
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc010a39cd4 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x415e868f:	0x00
+0x415e868f:	0x80
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc010a39cd4 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x415e868f:	0x80
+0x415e868f:	0x00
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc01018b950 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x4cf7d8f8:	0x61
+0x4:	0x00
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0x0000007fa89b5aa0 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x4166f34a:	0x00
+0x4166f34a:	0x20
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0x000000555d791510 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x41829028:	0x00
+0x41829028:	0x40
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0x0000007fa89b5b28 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x41829028:	0x40
+0x41829028:	0x00
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0x000000555d791510 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x416547eb:	0x00
+0x416547eb:	0x01
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0x000000555d791510 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x416547eb:	0x01
+0x416547eb:	0x00
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0x0000007fa8a00f20 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x415e47b1:	0x00
+0x415e47b1:	0x04
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0x000000555d7ea170 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc010010a80 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x4171759b:	0x11
+0x4171759b:	0x19
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc010a39304 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x4171759b:	0x19
+0x4171759b:	0x11
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc010a39cd4 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x4101e5a3:	0x01
+0x4173e662:	0x21
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc01013d8d8 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x4173e662:	0x21
+0x4173e662:	0x23
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc0102115dc in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x4173e662:	0x23
+0x4173e662:	0x21
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc010a39cd4 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x403ed7b6:	0x00
+0x403ed7b6:	0x04
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0x000000555d911a80 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x4179d203:	0x00
+0x4179d203:	0x40
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0x000000555d8c27e8 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x4179d203:	0x40
+0x4179d203:	0x00
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0x000000555d8c27e8 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x41651de6:	0x61
+0x41651de6:	0x63
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc01001268c in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x41651de6:	0x63
+0x41651de6:	0x61
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc0100101f8 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x45710f8c:	0x00
+0x45710f8c:	0x10
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0x0000007fa8f8c850 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x41746ec8:	0xc8
+0x41746ec8:	0xca
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0x0000007fba6fee44 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x416a8e0a:	0x4f
+0x416a8e0a:	0x5f
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0x0000007fba6fee44 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x416a8e0a:	0x5f
+0x416a8e0a:	0x4f
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc010a392f8 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x40526bd9:	0x43
+0x417733cb:	0x09
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc010a39cd4 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x417733cb:	0x09
+0x417733cb:	0x29
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc01014ffbc in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x76bf8f91:	0x00
+0x76bf8f91:	0x01
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc01013e268 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x41752328:	0x70
+0x41752328:	0x74
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0x0000007fa8fa3288 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x41752328:	0x74
+0x41752328:	0x70
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0x0000007fa8fa0eb4 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x416ace89:	0x00
+0x416ace89:	0x02
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc010010c00 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x416ace89:	0x02
+0x416ace89:	0x00
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0x0000007fa8f981c0 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x416ace89:	0x00
+0x416ace89:	0x02
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc010a392f8 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x41765900:	0xc0
+0x41765900:	0xc1
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc010a39cd4 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x41765900:	0xc1
+0x41765900:	0xc0
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0x0000007fa8f7f830 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x406f2b19:	0x01
+0x406f2b19:	0x41
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0x0000007fa8f83544 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x4163f2a2:	0x52
+0x4163f2a2:	0x72
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0x0000007fa8fa784c in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x405c416f:	0xaa
+0x405c416f:	0xea
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0x0000007fa8fa784c in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x41848171:	0x00
+0x41848171:	0x02
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0x0000007fa8fa91c4 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x41848171:	0x02
+0x41848171:	0x00
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0x0000007fa8f81f20 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x56e92ddc:	0x00
+0x56e92ddc:	0x01
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0x0000007fa8fa8620 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x4159467e:	0x00
+0x4159467e:	0x80
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0x0000007fa8fa8620 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x41658ba8:	0x98
+0x41658ba8:	0x99
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc01001268c in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x41658ba8:	0x99
+0x41658ba8:	0x98
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc010a39cd4 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc010a39cd4 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x4172b045:	0x00
+0x4172b045:	0x02
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc01010f7c8 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x4172b045:	0x02
+0x4172b045:	0x00
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc010a39cd4 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x416a750c:	0x52
+0x416a750c:	0x56
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc010a39cd4 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x416a750c:	0x56
+0x416a750c:	0x52
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc010a39994 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x47375bae:	0x00
+0x40e40f48:	0xeb
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc0103c4168 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x416dcb72:	0x00
+0x416dcb72:	0x04
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc010a39cd4 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x416dcb72:	0x04
+0x416dcb72:	0x00
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc010128a34 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x4175d6be:	0x00
+0x4175d6be:	0x04
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc010128a34 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x4175d6be:	0x04
+0x4175d6be:	0x00
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc0100d20cc in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x558eb896:	0x00
+0x558eb896:	0x08
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc010c8c600 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x4161da7c:	0x00
+0x4161da7c:	0x20
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0x0000007fa8faae64 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x4161da7c:	0x20
+0x4161da7c:	0x00
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0x0000007fa8fa21e0 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x41895ee3:	0x00
+0x41895ee3:	0x80
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc010aa9ecc in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x41895ee3:	0x80
+0x41895ee3:	0x00
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc010a38b00 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x50bbbda4:	0x7f
+0x50bbbda4:	0x7e
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc01001f8cc in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x417f1ede:	0x00
+0x417f1ede:	0x10
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc0100101f8 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x417f1ede:	0x10
+0x417f1ede:	0x00
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc010a39cd4 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x40b09f82:	0x15
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc01032d530 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x41630d9e:	0x00
+0x41630d9e:	0x04
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc01010f7c8 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x41630d9e:	0x04
+0x400092f2:	0xff
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc010a39cd4 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x40c63c0d:	0x99
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc010a39cd4 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x41847bc9:	0x00
+0x41847bc9:	0x01
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc010c8a398 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x41847bc9:	0x01
+0x41847bc9:	0x00
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc010a39cd4 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x495fbf3d:	0x00
+0x495fbf3d:	0x02
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc01014447c in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x4183fd83:	0x00
+0x4183fd83:	0x08
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc0106f2324 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x4183fd83:	0x08
+0x4183fd83:	0x00
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc010a39cd4 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x4c0fbc47:	0x67
+0x407861d0:	0xf4
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc010a39cd4 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x4179a8bb:	0x74
+0x4179a8bb:	0x76
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc010a39cb0 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x693765ff:	0x00
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc010a39994 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x41793c87:	0x6e
+0x41793c87:	0x66
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc0102120f8 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x41793c87:	0x66
+0x41793c87:	0x6e
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0x0000007fa8f98300 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x416c8b31:	0x8c
+0x416c8b31:	0x88
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0x0000007fa8f7f8e0 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x416c8b31:	0x88
+0x416c8b31:	0x8c
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0x0000007fa8f984a0 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x41784b00:	0x89
+0x41784b00:	0xc9
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0x0000007fa8fa7640 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x41784b00:	0xc9
+0x41784b00:	0x89
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc01001268c in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x41784b00:	0x89
+0x41784b00:	0xc9
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc010012758 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x415cdc95:	0x00
+0x415cdc95:	0x01
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc0100101f8 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x415cdc95:	0x01
+0x415cdc95:	0x00
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc010a39304 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x78d4dedd:	0x00
+0x409054ad:	0x21
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc01014c944 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x41861508:	0x00
+0x41861508:	0x10
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc010116b74 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x41861508:	0x10
+0x41861508:	0x00
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc010178c04 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x41861508:	0x00
+0x79ad96ed:	0x00
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc010a39cd4 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x79ad96ed:	0x00
+0x79ad96ed:	0x02
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc010a39cd4 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x79ad96ed:	0x02
+0x79ad96ed:	0x00
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc010a39cd4 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x79ad96ed:	0x00
+0x79ad96ed:	0x02
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc010129634 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x79ad96ed:	0x02
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc010129634 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x415eb443:	0x00
+:1234: Cannot assign requested address.
+:1234: Cannot assign requested address.
+:1234: Cannot assign requested address.
+packets can only be sent to a remote target
+packets can only be sent to a remote target
+packets can only be sent to a remote target
+Quit
+Quit
+Quit
+:1234: Cannot assign requested address.
+The program is not being run.
+packets can only be sent to a remote target
+The program is not being run.
+:1234: Cannot assign requested address.
+The program is not being run.
+Quit
+packets can only be sent to a remote target
+The program is not being run.
+Quit
+:1234: Cannot assign requested address.
+:1234: Cannot assign requested address.
+Remote debugging using :1234
+packets can only be sent to a remote target
+:1234: Cannot assign requested address.
+packets can only be sent to a remote target
+The program is not being run.
+packets can only be sent to a remote target
+:1234: Cannot assign requested address.
+Quit
+Quit
+Quit
+packets can only be sent to a remote target
+Quit
+packets can only be sent to a remote target
+The program is not being run.
+Quit
+The program is not being run.
+The program is not being run.
+The program is not being run.
+0x415eb443:	gdb_command.txt:1: Error in sourced command file:
+Cannot access memory at address 0x415eb443
+The program is not being run.
+:1234: Cannot assign requested address.
+packets can only be sent to a remote target
+Quit
+The program is not being run.
+:1234: Cannot assign requested address.
+:1234: Cannot assign requested address.
+:1234: Cannot assign requested address.
+:1234: Cannot assign requested address.
+:1234: Cannot assign requested address.
+packets can only be sent to a remote target
+:1234: Cannot assign requested address.
+packets can only be sent to a remote target
+:1234: Cannot assign requested address.
+:1234: Cannot assign requested address.
+packets can only be sent to a remote target
+:1234: Cannot assign requested address.
+packets can only be sent to a remote target
+:1234: Cannot assign requested address.
+packets can only be sent to a remote target
+packets can only be sent to a remote target
+packets can only be sent to a remote target
+Quit
+packets can only be sent to a remote target
+Quit
+packets can only be sent to a remote target
+packets can only be sent to a remote target
+Quit
+Quit
+Quit
+Quit
+:1234: Cannot assign requested address.
+Quit
+Quit
+The program is not being run.
+Quit
+The program is not being run.
+Quit
+packets can only be sent to a remote target
+The program is not being run.
+The program is not being run.
+:1234: Cannot assign requested address.
+The program is not being run.
+The program is not being run.
+The program is not being run.
+The program is not being run.
+The program is not being run.
+The program is not being run.
+Quit
+packets can only be sent to a remote target
+Quit
+The program is not being run.
+Quit
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+The program is not being run.
+:1234: Cannot assign requested address.
+:1234: Cannot assign requested address.
+:1234: Cannot assign requested address.
+packets can only be sent to a remote target
+packets can only be sent to a remote target
+packets can only be sent to a remote target
+Quit
+:1234: Cannot assign requested address.
+Quit
+Quit
+:1234: Cannot assign requested address.
+:1234: Cannot assign requested address.
+packets can only be sent to a remote target
+The program is not being run.
+packets can only be sent to a remote target
+packets can only be sent to a remote target
+The program is not being run.
+The program is not being run.
+Quit
+:1234: Cannot assign requested address.
+Quit
+Remote debugging using :1234
+Quit
+:1234: Cannot assign requested address.
+packets can only be sent to a remote target
+packets can only be sent to a remote target
+The program is not being run.
+The program is not being run.
+:1234: Cannot assign requested address.
+The program is not being run.
+Quit
+Quit
+Quit
+packets can only be sent to a remote target
+packets can only be sent to a remote target
+The program is not being run.
+The program is not being run.
+Quit
+The program is not being run.
+0x415eb443:	gdb_command.txt:1: Error in sourced command file:
+Cannot access memory at address 0x415eb443
+The program is not being run.
+:1234: Cannot assign requested address.
+packets can only be sent to a remote target
+:1234: Cannot assign requested address.
+:1234: Cannot assign requested address.
+packets can only be sent to a remote target
+Quit
+packets can only be sent to a remote target
+Quit
+The program is not being run.
+Quit
+The program is not being run.
+The program is not being run.
+:1234: Cannot assign requested address.
+packets can only be sent to a remote target
+Quit
+The program is not being run.
+:1234: Cannot assign requested address.
+:1234: Cannot assign requested address.
+packets can only be sent to a remote target
+packets can only be sent to a remote target
+:1234: Cannot assign requested address.
+Quit
+packets can only be sent to a remote target
+Quit
+The program is not being run.
+Quit
+:1234: Cannot assign requested address.
+:1234: Cannot assign requested address.
+The program is not being run.
+The program is not being run.
+packets can only be sent to a remote target
+packets can only be sent to a remote target
+Quit
+Quit
+The program is not being run.
+The program is not being run.
+:1234: Cannot assign requested address.
+packets can only be sent to a remote target
+Quit
+The program is not being run.
+:1234: Cannot assign requested address.
+:1234: Cannot assign requested address.
+packets can only be sent to a remote target
+:1234: Cannot assign requested address.
+packets can only be sent to a remote target
+packets can only be sent to a remote target
+Quit
+Quit
+:1234: Cannot assign requested address.
+Quit
+The program is not being run.
+:1234: Cannot assign requested address.
+The program is not being run.
+packets can only be sent to a remote target
+packets can only be sent to a remote target
+The program is not being run.
+Quit
+Quit
+The program is not being run.
+The program is not being run.
+:1234: Cannot assign requested address.
+:1234: Cannot assign requested address.
+packets can only be sent to a remote target
+Remote debugging using :1234
+packets can only be sent to a remote target
+Quit
+:1234: Cannot assign requested address.
+Quit
+:1234: Cannot assign requested address.
+Quit
+packets can only be sent to a remote target
+packets can only be sent to a remote target
+:1234: Cannot assign requested address.
+packets can only be sent to a remote target
+The program is not being run.
+The program is not being run.
+packets can only be sent to a remote target
+Quit
+Quit
+:1234: Cannot assign requested address.
+Quit
+packets can only be sent to a remote target
+The program is not being run.
+The program is not being run.
+Quit
+The program is not being run.
+0x415eb443:	gdb_command.txt:1: Error in sourced command file:
+Cannot access memory at address 0x415eb443
+The program is not being run.
+The program is not being run.
+:1234: Cannot assign requested address.
+:1234: Cannot assign requested address.
+packets can only be sent to a remote target
+packets can only be sent to a remote target
+Quit
+Quit
+The program is not being run.
+The program is not being run.
+:1234: Cannot assign requested address.
+packets can only be sent to a remote target
+Quit
+The program is not being run.
+:1234: Cannot assign requested address.
+packets can only be sent to a remote target
+Quit
+The program is not being run.
+:1234: Cannot assign requested address.
+packets can only be sent to a remote target
+Quit
+The program is not being run.
+:1234: Cannot assign requested address.
+packets can only be sent to a remote target
+Quit
+The program is not being run.
+:1234: Cannot assign requested address.
+packets can only be sent to a remote target
+Quit
+The program is not being run.
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+Python Exception <class 'NameError'>: Installation error: gdb._execute_unwinders function is missing
+0xffffffc010010a80 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x415eb443:	0x00
+Python Exception <class 'NameError'>: Installation error: gdb._execute_unwinders function is missing
+0x415eb443:	0x04
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+Python Exception <class 'NameError'>: Installation error: gdb._execute_unwinders function is missing
+0xffffffc010010c80 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x415eb443:	0x04
+Python Exception <class 'NameError'>: Installation error: gdb._execute_unwinders function is missing
+0x415eb443:	0x00
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc010012758 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x415eb443:	0x00
+0x415eb443:	0x04
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+Python Exception <class 'NameError'>: Installation error: gdb._execute_unwinders function is missing
+0xffffffc010a392f8 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x415eb443:	0x04
+Python Exception <class 'NameError'>: Installation error: gdb._execute_unwinders function is missing
+0x415eb443:	0x00
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc01018b950 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x58575433:	0x00
+0x58575433:	0x08
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0x0000007fa46f7604 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x406d5538:	0xc0
+0x406d5538:	0xd0
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0x0000007f81fa9f68 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x4160c1fc:	0x00
+0x4160c1fc:	0x01
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0x0000007f819aaf20 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x6ad68623:	0x00
+0x6ad68623:	0x40
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0x000000556c180c84 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x403b8df3:	0x90
+0x403b8df3:	0xd0
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0x0000007fa39d3000 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x415e58eb:	0x00
+0x415e58eb:	0x10
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0x00000055606ad7a8 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x536576a1:	0x4d
+0x536576a1:	0x45
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0x0000007f96f3c5ec in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x40759dab:	0xd5
+0x40759dab:	0xd4
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0x0000007fba70815c in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x417e4af6:	0x00
+0x417e4af6:	0x10
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc010010c00 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x7e4fa5ac:	0x00
+0x7e4fa5ac:	0x08
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0x0000007fbea50d88 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x407143e8:	0xe9
+0x407143e8:	0xc9
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0x0000007fb97d902c in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x417be89f:	0x00
+0x417be89f:	0x40
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0x0000007fb94b5de0 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x7ec919ac:	0x00
+0x7ec919ac:	0x02
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0x0000007f9399e2a8 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x40a4ad84:	0x08
+0x40a4ad84:	0x09
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0x0000007f92b16e44 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x417d473d:	0x00
+0x417d473d:	0x02
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0x0000007fabdfa380 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x63216193:	0x00
+0x63216193:	0x02
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc01073bf68 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x4092b44e:	0x03
+0x4092b44e:	0x07
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0x0000007fbaa30360 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x418a040d:	0x00
+0x418a040d:	0x80
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0x0000007fb38ad360 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x5169629a:	0x0d
+0x5169629a:	0x4d
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc01012aea0 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x407552a8:	0x08
+0x407552a8:	0x18
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0x00000055892edf14 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x416a4b23:	0x20
+0x416a4b23:	0x30
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc010010c00 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x58c900b2:	0x00
+0x58c900b2:	0x08
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0x0000007fa6311150 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x40bc3366:	0x03
+0x40bc3366:	0x43
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc010010c00 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x41808062:	0x00
+0x41808062:	0x20
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc010010c00 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x70fd99f1:	0x00
+0x70fd99f1:	0x10
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0x0000007fab0c14c8 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x40c951c8:	0xe1
+0x40c951c8:	0xe9
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc01010f7c8 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x415a26af:	0x00
+0x415a26af:	0x08
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0x0000007f8f4f3148 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x7276acec:	0x00
+0x7276acec:	0x08
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0x0000007f9539284c in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x40bebb35:	0xc2
+0x40bebb35:	0xc6
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0x0000007fb45d2cf0 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x5dd63d8b:	0x00
+0x5dd63d8b:	0x02
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc010010c00 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x5dd63d8b:	0x02
+0x5dd63d8b:	0x00
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0x0000007f8da23f20 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x5dd63d8b:	0x00
+0x5dd63d8b:	0x02
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+warning: Currently logging to gdb.txt.  Turn the logging off and on to make the new setting effective.
+warning: Currently logging to gdb.txt.  Turn the logging off and on to make the new setting effective.
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0x0000007fb4caade0 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x5dd63d8b:	0x02
+0x5dd63d8b:	0x00
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+warning: Currently logging to gdb.txt.  Turn the logging off and on to make the new setting effective.
+warning: Currently logging to gdb.txt.  Turn the logging off and on to make the new setting effective.
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0x0000007f82d06218 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x5dd63d8b:	0x00
+0x5dd63d8b:	0x02
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+warning: Currently logging to gdb.txt.  Turn the logging off and on to make the new setting effective.
+warning: Currently logging to gdb.txt.  Turn the logging off and on to make the new setting effective.
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc010a39cd4 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x5dd63d8b:	0x02
+0x5dd63d8b:	0x00
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+warning: Currently logging to gdb.txt.  Turn the logging off and on to make the new setting effective.
+warning: Currently logging to gdb.txt.  Turn the logging off and on to make the new setting effective.
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0x0000007f8ae1c13c in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x5dd63d8b:	0x00
+0x5dd63d8b:	0x02
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc010010c00 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x79c70e96:	0x00
+0x79c70e96:	0x02
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0x0000007fa5a80c64 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x4060dd47:	0x17
+0x4060dd47:	0x97
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc0101015cc in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x41841ce6:	0x00
+0x41841ce6:	0x80
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0x0000007f9fb967dc in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x487082ef:	0xd6
+0x487082ef:	0x96
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc01010f7c8 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x413a7844:	0xac
+0x413a7844:	0xa8
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0x00000055701fd9e4 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x4160ba0c:	0x00
+0x4160ba0c:	0x02
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc010010c00 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x755f02c2:	0x00
+0x755f02c2:	0x80
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0x0000007fad52bf20 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x40c69503:	0xd5
+0x40c69503:	0xdd
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc0100385d4 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x416c1e43:	0x00
+0x416c1e43:	0x20
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc010377ee8 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x555dad19:	0x00
+0x555dad19:	0x40
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc010747204 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x40293798:	0x80
+0x40293798:	0x82
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc010010c00 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x416a54f9:	0x74
+0x416a54f9:	0x75
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc010302178 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x5a8daad2:	0x00
+0x5a8daad2:	0x10
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc010010c00 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x404c7dbc:	0x79
+0x404c7dbc:	0x39
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0x0000007f8abf3880 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x41735057:	0xff
+0x41735057:	0xef
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc010c8a0ec in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x578434e9:	0x00
+0x578434e9:	0x08
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc010c8a0ec in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x407ff8d4:	0x6b
+0x407ff8d4:	0x69
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc010c8a0ec in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x4162d77d:	0x00
+0x4162d77d:	0x01
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc010c8a0ec in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x53071362:	0xc9
+0x53071362:	0xc8
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc010c8a0ec in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x4050c049:	0x23
+0x4050c049:	0x33
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc010c8a0ec in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x41719048:	0x00
+0x41719048:	0x80
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc010c8a0ec in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x58ab40ad:	0x00
+0x58ab40ad:	0x10
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc010c8a0ec in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x4103738e:	0x68
+0x4103738e:	0x6c
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc010c8a0ec in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x4164e8e9:	0x00
+0x4164e8e9:	0x01
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc010c8a0ec in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x4685b01b:	0x00
+0x4685b01b:	0x02
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc010c8a0ec in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x40e4efb8:	0x1f
+0x40e4efb8:	0x1b
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc010c8a0ec in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x4178a3e7:	0x00
+0x4178a3e7:	0x01
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc010c8a0ec in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x48637e5a:	0x40
+0x48637e5a:	0x44
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc010c8a0ec in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x4076c4ed:	0x00
+0x4076c4ed:	0x40
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc010c8a0ec in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x4182a1c9:	0x00
+0x4182a1c9:	0x08
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc010c8a0ec in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x442126b6:	0x00
+0x442126b6:	0x02
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc010c8a0ec in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x40624cab:	0x8b
+0x40624cab:	0x0b
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc010c8a0ec in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x4185676d:	0x00
+0x4185676d:	0x02
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc010c8a0ec in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x5c639499:	0x00
+0x5c639499:	0x08
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc010c8a0ec in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x40683d4e:	0x00
+0x40683d4e:	0x20
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc010c8a0ec in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x415d2116:	0x00
+0x415d2116:	0x40
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc010c8a0ec in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x622170ab:	0x00
+0x622170ab:	0x08
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc010c8a0ec in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x40b11929:	0x09
+0x40b11929:	0x19
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc010c8a0ec in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x4166fad9:	0x6e
+0x4166fad9:	0x66
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc010c8a0ec in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x5d46e0f6:	0x00
+0x5d46e0f6:	0x04
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc010c8a0ec in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x4102eeec:	0x61
+0x4102eeec:	0x69
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc010c8a0ec in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x4186c2ca:	0x00
+0x4186c2ca:	0x80
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc010c8a0ec in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x7ab8f38a:	0x00
+0x7ab8f38a:	0x10
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc010c8a0ec in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x40d74a37:	0x2a
+0x40d74a37:	0xaa
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc010c8a0ec in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x415e2a57:	0x00
+0x415e2a57:	0x02
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc010c8a0ec in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x6027a682:	0x00
+0x6027a682:	0x20
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc010c8a0ec in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x41146c15:	0xe2
+0x41146c15:	0xe0
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc010c8a0ec in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x417150fa:	0x0c
+0x417150fa:	0x4c
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc010c8a0ec in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x62a34b05:	0x00
+0x62a34b05:	0x02
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc010c8a0ec in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x40b562f7:	0x39
+0x40b562f7:	0x19
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc010c8a0ec in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x41803b99:	0x00
+0x41803b99:	0x04
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc010c8a0ec in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x559f30bd:	0x00
+0x559f30bd:	0x04
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc010c8a0ec in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x406e12f8:	0x08
+0x406e12f8:	0x18
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc010c8a0ec in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x417ba10e:	0x00
+0x417ba10e:	0x80
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc010c8a0ec in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x61eda263:	0x00
+0x61eda263:	0x02
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc010c8a0ec in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x411c0953:	0x61
+0x411c0953:	0x60
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc010c8a0ec in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x4181d886:	0x00
+0x4181d886:	0x20
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc010c8a0ec in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x6fae9c70:	0x00
+0x6fae9c70:	0x10
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc010c8a0ec in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x406a192d:	0x03
+0x406a192d:	0x07
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc010c8a0ec in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x4181ecc7:	0x00
+0x4181ecc7:	0x10
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc010c8a0ec in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x57a3134f:	0x00
+0x57a3134f:	0x80
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc010c8a0ec in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x40a602fa:	0x9f
+0x40a602fa:	0x97
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc010c8a0ec in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x41704fdc:	0x00
+0x41704fdc:	0x20
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc010c8a0ec in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x637d8a78:	0x00
+0x637d8a78:	0x08
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc010c8a0ec in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x4060a77d:	0x4e
+0x4060a77d:	0xce
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc010c8a0ec in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x415eafc0:	0x00
+0x415eafc0:	0x10
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc010c8a0ec in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x78942199:	0x00
+0x78942199:	0x08
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc010c8a0ec in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x40b8f051:	0x38
+0x40b8f051:	0x28
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc010c8a0ec in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x415ffb4a:	0x00
+0x415ffb4a:	0x80
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc010c8a0ec in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x555cbccf:	0x00
+0x555cbccf:	0x80
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc010c8a0ec in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x402919e5:	0x7b
+0x402919e5:	0x3b
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc01073f894 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x416a9ca2:	0x4a
+0x416a9ca2:	0x5a
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc01073f894 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x75630280:	0x00
+0x75630280:	0x02
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc01073f88c in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x40af2635:	0x86
+0x40af2635:	0xa6
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc01073f894 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x417e9ad9:	0x00
+0x417e9ad9:	0x10
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc01073f88c in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x77e842c0:	0x00
+0x77e842c0:	0x40
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc01073f894 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x405a48fe:	0x00
+0x405a48fe:	0x40
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc01073f88c in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x416afb98:	0x65
+0x416afb98:	0x6d
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc01073f894 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x616b5391:	0x00
+0x616b5391:	0x01
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc01073f894 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x404d7e3b:	0xf9
+0x404d7e3b:	0xf1
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc01073f88c in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x4166ce30:	0x04
+0x4166ce30:	0x44
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc01073f88c in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x55082600:	0x00
+0x55082600:	0x40
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc01073f88c in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x4131a26c:	0x72
+0x4131a26c:	0x73
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc01073f88c in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x416c84c8:	0x30
+0x416c84c8:	0x34
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc01073f8a8 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x5c1110f1:	0x00
+0x5c1110f1:	0x08
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc01073f894 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x4118de49:	0x6f
+0x4118de49:	0x6b
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc01073f894 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x41894e8e:	0x00
+0x41894e8e:	0x10
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc01073f8a8 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x4a8db56f:	0x44
+0x4a8db56f:	0x64
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc01073f88c in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x40ee8252:	0x1c
+0x40ee8252:	0x9c
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc01073f88c in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x4173c13b:	0x11
+0x4173c13b:	0x31
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc01073f894 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x550a52fc:	0x00
+0x550a52fc:	0x02
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc01073f88c in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x40495f46:	0x40
+0x40495f46:	0x44
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc01073f88c in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x417f1e6c:	0x00
+0x417f1e6c:	0x20
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc01073f894 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x54722b0f:	0x00
+0x54722b0f:	0x01
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc01073f8a8 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x40bcfaff:	0xaa
+0x40bcfaff:	0xab
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc01073f88c in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x4173faea:	0x21
+0x4173faea:	0x20
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc01073f88c in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x59cd628f:	0x00
+0x59cd628f:	0x04
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc01073f88c in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x40d2d06c:	0xe9
+0x40d2d06c:	0xeb
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc01073f894 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x415923fa:	0x00
+0x415923fa:	0x40
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc01073f88c in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x569fcb9e:	0x00
+0x569fcb9e:	0x80
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc01073f894 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x40f19949:	0x00
+0x40f19949:	0x80
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc01073f88c in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x41710b2e:	0xff
+0x41710b2e:	0xbf
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc01073f88c in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x440cfce5:	0x00
+0x440cfce5:	0x10
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc01073f88c in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x4056055b:	0xb1
+0x4056055b:	0xf1
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc01073f8a0 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x415954e4:	0x00
+0x415954e4:	0x04
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc01073f88c in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x46907842:	0x00
+0x46907842:	0x08
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc01073f88c in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x40b1f86b:	0x94
+0x40b1f86b:	0x96
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc01073f88c in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x4185e3d1:	0x00
+0x4185e3d1:	0x04
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc01073f894 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x787b8367:	0x00
+0x787b8367:	0x80
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc01073f88c in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x40b27413:	0x90
+0x40b27413:	0x80
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc01073f88c in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x41750905:	0xff
+0x41750905:	0xef
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc01073f88c in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x78eeb2d7:	0x00
+0x78eeb2d7:	0x02
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc01073f88c in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x402f882e:	0x15
+0x402f882e:	0x35
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc01073f894 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x41687110:	0x5f
+0x41687110:	0x5d
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc01073f894 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x74673686:	0x00
+0x74673686:	0x10
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+Remote debugging using :1234
+warning: No executable has been specified and target does not support
+determining executable automatically.  Try using the "file" command.
+0xffffffc01073f894 in ?? ()
+sending: Qqemu.PhyMemMode:1
+received: "OK"
+0x4138e132:	0x3d
+0x4138e132:	0x39
+Detaching from pid process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
