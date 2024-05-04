@@ -51,9 +51,13 @@ if __name__ == '__main__':
 
     area = address_dict.keys()
     filp_time = 0
-    while filp_time <= 1000_0000:
+    while filp_time < 0x4000_0000:
         filp_bit_in_area(address_dict, 'System RAM')
-        filp_bit_in_area(address_dict, 'Kernel Code')
         filp_bit_in_area(address_dict, 'Kernel Data')
         filp_time += 1
-        time.sleep(0.01)
+        time.sleep(0.005)
+    
+    filp_time = 0
+    while filp_time < 0x4000:
+        filp_time += 1
+        filp_bit_in_area(address_dict, 'Kernel Code')
