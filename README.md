@@ -87,4 +87,6 @@ Just `cp` or `mv` the code you clone at Step One in the Tutorial to the shared d
 
 Firstly run `get_iomem.sh` in qemu guest machine to get `iomem.txt`
 
-Secondly run `python3 gdb.py` in the host machine to simulate the bits flip.
+Secondly run `python3 gdb.py` in the host machine to simulate the bits flip. 
+
+**Note**: Detach gdb server before `python3 gdb.py`, otherwise it will blocked because 1234 port is used.
