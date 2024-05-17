@@ -95,4 +95,4 @@ Secondly run `python3 gdb.py` in the host machine to simulate the bits flip.
 
 In QEMU, run `echo 8 > /proc/sys/kernel/printk` to get all message in stdout.
 
-Before start QEMU, add `| tee <some-file>` to store all content show in stdout and you put in stdin in QEMU at file `<some-file`.
+Before start QEMU, add `| tee <some-file>` at the end of command to store all content that showed in stdout and that you put in stdin in QEMU at file `<some-file`.
