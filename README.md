@@ -90,3 +90,9 @@ Firstly run `get_iomem.sh` in qemu guest machine to get `iomem.txt`
 Secondly run `python3 gdb.py` in the host machine to simulate the bits flip. 
 
 **Note**: Detach gdb server before `python3 gdb.py`, otherwise it will blocked because 1234 port is used.
+
+## 5. Store the panic message when kernel panic
+
+In QEMU, run `echo 8 > /proc/sys/kernel/printk` to get all message in stdout.
+
+Before start QEMU, add `| tee <some-file>` to store all content show in stdout and you put in stdin in QEMU at file `<some-file`.
