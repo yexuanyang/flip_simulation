@@ -20,7 +20,7 @@ Simulate the random bits flip in qemu guest machine with gdb.
 
 ## 1. Clone this repo in somewhere
 
-Run `git clone https://github.com/yexuanyang/filp_simulation.git` or `git clone git@github.com:yexuanyang/filp_simulation.git`
+Run `git clone https://github.com/yexuanyang/flip_simulation.git` or `git clone git@github.com:yexuanyang/flip_simulation.git`
 
 Store the repo somewhere.
 
