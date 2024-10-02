@@ -20,7 +20,7 @@ Simulate the random bits flip in qemu guest machine with gdb.
 
 ## 1. Clone this repo in somewhere
 
-Run `git clone https://github.com/yexuanyang/filp_simulation.git` or `git clone git@github.com:yexuanyang/filp_simulation.git`
+Run `git clone https://github.com/yexuanyang/flip_simulation.git` or `git clone git@github.com:yexuanyang/flip_simulation.git`
 
 Store the repo somewhere.
 
@@ -87,4 +87,12 @@ Just `cp` or `mv` the code you clone at Step One in the Tutorial to the shared d
 
 Firstly run `get_iomem.sh` in qemu guest machine to get `iomem.txt`
 
-Secondly run `python3 gdb.py` in the host machine to simulate the bits flip.
+Secondly run `python3 gdb.py` in the host machine to simulate the bits flip. 
+
+**Note**: Detach gdb server before `python3 gdb.py`, otherwise it will blocked because 1234 port is used.
+
+## 5. Store the panic message when kernel panic
+
+In QEMU, run `echo 8 > /proc/sys/kernel/printk` to get all message in stdout.
+
+Before start QEMU, add `| tee <some-file>` at the end of command to store all content that showed in stdout and that you put in stdin in QEMU at file `<some-file`.
