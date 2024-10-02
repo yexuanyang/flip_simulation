@@ -26,7 +26,7 @@ def extract(file) -> dict:
                 address_dict["System RAM"].append((start_address, end_address))
     return address_dict
 
-def filp_bit_in_area(address_dict, area):
+def flip_bit_in_area(address_dict, area):
     address_start = int(address_dict[area][0][0], base=16)
     address_end = int(address_dict[area][0][1], base=16)
 
@@ -41,7 +41,7 @@ def filp_bit_in_area(address_dict, area):
     with open('gdb_command.txt', 'w') as f:
         f.writelines(command_list)
     subprocess.run(['./gdb.sh'], check=True, stdout=subprocess.DEVNULL)
-    print(f'filp the Bit {random_bit} in the Byte at physical address 0x{random_address:x} in area {area}')
+    print(f'flip the Bit {random_bit} in the Byte at physical address 0x{random_address:x} in area {area}')
 
 if __name__ == '__main__':
     address_dict = extract('iomem.txt')
@@ -50,14 +50,18 @@ if __name__ == '__main__':
         print(f'{k}: [0x{v[0][0]}, 0x{v[0][1]}]')
 
     area = address_dict.keys()
-    filp_time = 0
-    while filp_time < 0x4000_0000:
-        filp_bit_in_area(address_dict, 'System RAM')
-        filp_bit_in_area(address_dict, 'Kernel Data')
-        filp_time += 1
-        time.sleep(0.005)
+    flip_time = 0
+    """
+    Except there will be 10 bits flip occur in 1 GB RAM per month.
+    For 5 years and 16 GB RAM machine in space, there will be 5 * 12 * 16 * 10 = 9600 times flip.
+    There are 5 * 360 * 24 * 3600 = 155,520,000 seconds in 5 years, so one flip occurs every 155520000 / 9600 = 16200 seconds.
+    One bit flip use nearly 0.155s in program, we assume 0.5s in program as 16200s in real world, 
+    so program sleep 0.345s after every flip.
+    We simulate 8G machine in 5 years, in other word we simulate 4800 times flip. 
+    Because every flip takes 0.5s in program so the program will run 40 minutes.
+    """
+    while flip_time < 4800:
+        flip_bit_in_area(address_dict, 'System RAM')
+        flip_time += 1
+        time.sleep(0.345)
     
-    filp_time = 0
-    while filp_time < 0x4000:
-        filp_time += 1
-        filp_bit_in_area(address_dict, 'Kernel Code')
