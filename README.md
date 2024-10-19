@@ -18,15 +18,15 @@ Simulate the random bits flip in qemu guest machine with gdb.
 
 # Tutorial
 
-## 1. Clone this repo in somewhere
+## Clone this repo in somewhere
 
 Run `git clone https://github.com/yexuanyang/flip_simulation.git` or `git clone git@github.com:yexuanyang/flip_simulation.git`
 
 Store the repo somewhere.
 
-## 2. Make sure your QEMU and Kernel both support 9p shared filesystem
+## Make sure your QEMU and Kernel both support 9p shared filesystem
 
-### 2.1. Download QEMU from the source (one optional way to support 9p)
+### Download QEMU from the source (one optional way to support 9p)
 
 Run these commands in bash to install QEMU from the source. QEMU source tar is obtained from its official website.
 
@@ -44,7 +44,7 @@ make install
 qemu-system-aarch64 --version
 ```
 
-### 2.2. Make kernel with this config (one optional way to support 9p)
+### Make kernel with this config (one optional way to support 9p)
 
 Enter `make LLVM=1 menuconfig` in the root directory of the kernel source. enter `/` to search these configs and open them.
 
@@ -66,7 +66,7 @@ CONFIG_VIRTIO_BLK=y
 CONFIG_VIRTIO_NET=y
 ```
 
-### 2.3. Mount 9p fs when qemu boot
+### Mount 9p fs when qemu boot
 
 Add `-virtfs local,path=/path/to/share,mount_tag=host0,security_model=passthrough,id=host0` or `-fsdev local,security_model=passthrough,id=fsdev0,path=<path-to-shared-dir-in-host> -device virtio-9p-pci,id=fs0,fsdev=fsdev0,mount_tag=hostshare`
 after your qemu boot command to use 9p fs. I recommend the first way.
@@ -75,23 +75,42 @@ Then interacting with the qemu guest machine tty console, run `mount -t 9p -o tr
 
 You can also add a new line `host0 /mnt/shared 9p trans=virtio,version=9p2000.L 0 0` at the end of `/etc/fstab` to make the qemu mount 9p automatically.
 
-### 2.4. Start gdb server when qemu boot
+## Start the qemu gdb server and qemu monitor 
+
+### Start gdb server when qemu boot
 
 Add `-s -S` at the end of your boot command will start a gdb server at `localhost:1234` and wait for gdb to continue. Run `gdb -ex 'target remote:1234'` to attach the server. Enter `continue` will make the kernel boot.
 
-## 3. Put the repo in the shared directory
+### Start qemu monitor when qemu boot
+Append `-monitor unix:/tmp/qemu_socket,server,nowait` to your boot command, it will start a `qemu monitor` which can be connected by socket file `/tmp/qemu_socket` using `socat -,echo=0,icanon=0 /tmp/qemu_socket` or `nc -U /tmp/qemu_socket`. And you can send a single command to qemu monitor using `echo "info status" | socat - /tmp/qemu_socket`. 
 
-Just `cp` or `mv` the code you clone at Step One in the Tutorial to the shared directory.
+**Note:** The socket file `/tmp/qemu_socket` will be created automatically, you should make sure the filename is unique. Do not change this filename, the script will use this filename to connect to qemu monitor. 
 
-## 4. Run scripts in sequence
+## Prepare a qcow2 format disk image
+Qemu support many format disk image, like `raw`, `qcow2`, etc. Because we use `loadvm` and `savevm` in qemu monitor, so we need a `qcow2` format disk image.
+
+Basically, you can convert a raw ext4 image to qcow2 image by `qemu-img convert -f raw -O qcow2 <source filename>.img <dest filename>.qcow2`. Note that the boot command maybe change when you use a different format disk image.
+
+Reference:
+1. [qemu.org QEMU disk image utility: qemu-img convert](https://www.qemu.org/docs/master/tools/qemu-img.html#cmdoption-qemu-img-arg-convert)
+2. [openstack qemu-img convert: raw, qcow2, qed, vdi, vmdk, vhd](https://docs.openstack.org/image-guide/convert-images.html#qemu-img-convert-raw-qcow2-qed-vdi-vmdk-vhd)
+
+
+## Put the repo in the shared directory
+
+Just `cp` or `mv` the code you cloned before to the shared directory.
+
+## Run scripts in sequence
 
 Firstly run `get_iomem.sh` in qemu guest machine to get `iomem.txt`
 
 Secondly run `python3 gdb.py` in the host machine to simulate the bits flip. 
 
+Thirdly run `python3 snap.py` in the host machine to tests the failure rate of a machine after a single particle flip occurs and the machine runs for a period of time.
+
 **Note**: Detach gdb server before `python3 gdb.py`, otherwise it will blocked because 1234 port is used.
 
-## 5. Store the panic message when kernel panic
+## Store the panic message when kernel panic
 
 In QEMU, run `echo 8 > /proc/sys/kernel/printk` to get all message in stdout.
 

@@ -1,3 +1,2 @@
-iomem.txt
-gdb.txt
-gdb_command.txt
+*.txt
+__pycache__
