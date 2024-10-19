@@ -114,4 +114,4 @@ Thirdly run `python3 snap.py` in the host machine to tests the failure rate of a
 
 In QEMU, run `echo 8 > /proc/sys/kernel/printk` to get all message in stdout.
 
-Before start QEMU, add `| tee <some-file>` at the end of command to store all content that showed in stdout and that you put in stdin in QEMU at file `<some-file`.
+Before start QEMU, add `| tee <some-file>` at the end of command to store all content that showed in stdout and that you put in stdin in QEMU at file `<some-file>`.

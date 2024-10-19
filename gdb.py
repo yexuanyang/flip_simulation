@@ -16,7 +16,7 @@ if __name__ == '__main__':
     for k, v in address_dict.items():
         print(f'{k}: [0x{v[0][0]}, 0x{v[0][1]}]')
 
-    area = address_dict.keys()
+    areas = list(address_dict.keys())
     flip_time = 0
     """
     Except there will be 10 bits flip occur in 1 GB RAM per month.
@@ -27,8 +27,9 @@ if __name__ == '__main__':
     We simulate 8G machine in 5 years, in other word we simulate 4800 times flip. 
     Because every flip takes 0.5s in program so the program will run 40 minutes.
     """
-    while flip_time < 4800:
-        flip_bit_in_area(address_dict, 'System RAM')
-        flip_time += 1
-        time.sleep(0.345)
+    for area in areas:
+        while flip_time < 4800:
+            flip_bit_in_area(address_dict, area)
+            flip_time += 1
+            time.sleep(0.345)
     
