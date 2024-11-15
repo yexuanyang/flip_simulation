@@ -1,6 +1,9 @@
 import gdb
 import random
 import re
+import time
+import csv
+import logging
 
 class MemoryRange:
     def __init__(self, start, end, priority, kind, name):
@@ -45,6 +48,31 @@ class FlatView:
                 return offset
             offset -= end
         assert False, "should have been in range!"
+
+class CsvLogger:
+    def __init__(self, filename) -> None:
+        self.filename = filename
+        with open(self.filename, mode='w', newline='') as file:
+            writer = csv.writer(file)
+            # 写入表头
+            writer.writerow(['Address/Register', 'Old Value', 'New Value'])
+
+    def log(self, address_or_register, old_value, new_value):
+        with open(self.filename, mode='a', newline='') as file:
+            writer = csv.writer(file)
+            writer.writerow([address_or_register, old_value, new_value])
+
+logger = None
+
+def init_logger(filename):
+    global logger
+    logger = CsvLogger(filename)
+
+def log_single(address_or_register, old_value, new_value):
+    if logger:
+        logger.log(address_or_register, old_value, new_value)
+    else:
+        print("Injected bitflip into address/register %s: old value %s -> new value %s" % (address_or_register, old_value, new_value))
 
 def qemu_hmp(cmdstr):
     return gdb.execute("monitor %s" % cmdstr, to_string=True).strip()
@@ -94,7 +122,7 @@ def list_registers():
         frame = gdb.selected_frame()
         cached_reg_list = [(r, frame.read_register(r).type.sizeof)
                            for r in frame.architecture().registers()
-                           if str(frame.read_register(r).type) not in ("float", "union neon_q", "neon_q")]
+                           if str(frame.read_register(r).type) in ("long", "void *", "void (*)()", "union aarch64v")]
     return cached_reg_list[:]
 
 def inject_bitflip(address, bytewidth, bit=None):
@@ -112,44 +140,58 @@ def inject_bitflip(address, bytewidth, bit=None):
 
     assert nvalue == rnvalue and nvalue != ovalue, \
         "mismatched values: o=0x%x n=0x%x rn=0x%x" % (ovalue, nvalue, rnvalue)
-    print("Injected bitflip into address 0x%x: old value 0x%x -> new value 0x%x" % (address, ovalue, nvalue))
+    log_single(hex(address), hex(ovalue), hex(nvalue))
 
 def sample_address():
     return mtree()["memory"].random_address()
 
 def inject_register_bitflip(register_name, bit=None):
     value = gdb.selected_frame().read_register(register_name)
-    if str(value.type) in ("long", "long long", "void *", "void (*)()"):
-        lookup = None
-    elif str(value.type) == "union neon_d" or str(value.type) == "neon_d":
-        lookup = "u64"
-    else:
-        raise RuntimeError("not handled: inject_register_bitflip into register %s of type %s"
-                           % (register_name, value.type))
 
-    bitcount = 8 * value.type.sizeof
+    # union aarch64v have 128 bits, but we can only flip 64 of them
+    bitcount = min(8 * value.type.sizeof, 64)
     bitmask = (1 << bitcount) - 1
     if bit is None:
         bit = random.randint(0, bitcount - 1)
 
-    intval = int(value[lookup] if lookup else value)
-    newval = intval ^ (1 << bit)
-    gdb.execute("set $%s%s = %d" % (register_name, "." + lookup if lookup else "", newval))
-    # global_writer.write_other()
+    if str(value.type) == "union aarch64v":
+        # $v register, 128 bits.
+        # register $v schema: 
+        #  {
+        #   d = {f = {double, double}, u = {uint64_t, uint64_t}, s = {int64_t, int64_t}}, 
+        #   s = {f = {float, ... 3 times}, u = {uint32_t,... 3 times}, s = {int32_t, ... 3 times}}, 
+        #   h = {u = {unsigned, ... 7 times}, s = {signed, ... 7 times}}, 
+        #   b = {u = {uint8_t, <repeats 15 times>}, s = {int8_t, <repeats 15 times>}}, 
+        #   q = {u = {uint128_t}, s = {int128_t}}
+        #  }
+        # For example, access registers q0-q31 to get the 128 bits, d0-d31 to get the 64 bits, and so on.
 
-    reread = gdb.selected_frame().read_register(register_name)
-    rrval = int(reread[lookup] if lookup else reread)
+        # random pick upper 64 or lower 64
+        index = random.randint(0, 1)
+        oldval = int(gdb.execute("p/x ((int64_t[2])$%s)[%d]" % (register_name, index), to_string=True)
+                     .split("=")[1].strip(), 16)
+        newval = oldval ^ (1 << bit)
+        gdb.execute("set ((int64_t[2])$%s)[%d] = %d" % (register_name, index, newval))
+        rrval = int(gdb.execute("p/x ((int64_t[2])$%s)[%d]" % (register_name, index), to_string=True)
+                    .split("=")[1].strip(), 16)
+    else:
+        # normal register, 64 bits
+        assert value.type.sizeof == 8, "invalid general register size: %u" % value.type.sizeof
+        oldval = int(value)
+        newval = oldval ^ (1 << bit)
+        gdb.execute("set $%s = %d" % (register_name, newval))
+        rrval = int(gdb.selected_frame().read_register(register_name))
+    
     if (newval & bitmask) == (rrval & bitmask):
-        print("Injected bitflip into register %s: old value 0x%x -> new value 0x%x" % (register_name, intval, rrval))
-        # log_writer.log_command("inject_reg %s %u" % (register_name, bit))
+        log_single(register_name, hex(oldval), hex(rrval))
         return True
-    elif (intval & bitmask) == (rrval & bitmask):
-        print("Bitflip could not be injected into register %s. (0x%x -> 0x%x ignored.)"
-              % (register_name, intval, newval))
+    elif (oldval & bitmask) == (rrval & bitmask):
+        print("Bitflip could not be injected into register %s. (%x -> %x ignored.)"
+              % (register_name, oldval, newval))
         return False
     else:
-        raise RuntimeError("double-mismatched register values on register %s: o=0x%x n=0x%x rr=0x%x"
-                           % (register_name, intval, newval, rrval))
+        raise RuntimeError("double-mismatched register values on register %s: o=%x n=%x rr=%x"
+                           % (register_name, oldval, newval, rrval))
     
 def inject_reg_internal(register_name, bit=None):
     registers = [r.name for r, nb in list_registers()]
@@ -300,6 +342,18 @@ def inject_reg(args):
 #     inject_instant_restart()
 
 @BuildCmd
+def loginject(args):
+    """Log the injection of a bitflip"""
+    
+    args = args.strip().split(" ")
+    if len(args) != 1:
+        print("usage: loginject <filename>")
+        print("Log the injection of a bitflip to a csv file")
+        return
+
+    init_logger(args[0])
+
+@BuildCmd
 def autoinject(args):
     """
     Automatically inject fault into the VM accroding to the provided inject type. 
@@ -312,6 +366,7 @@ def autoinject(args):
     1. ram: inject fault in RAM
     2. reg: inject fault in Registers
     """
+
     args = args.strip().split(" ")
     if len(args) != 4 or args[3] not in ("ram", "reg"):
         print("usage: autoinject <total_fault_number> <min_interval> <max_interval> <fault_type>")
@@ -328,6 +383,7 @@ def autoinject(args):
     assert 0 < mint <= maxt, "min_interval > max_interval"
     ftype = args[3]
 
+    stime = time.time()
     for _ in range(times):
         step_ns(random.randint(mint, maxt))
 
@@ -335,3 +391,6 @@ def autoinject(args):
             inject_reg_internal(None)
         elif ftype == "ram":
             inject_bitflip(sample_address(), 1)
+    etime = time.time()
+    duration = etime - stime
+    print("Total injection duration: %.3f s" % duration)
