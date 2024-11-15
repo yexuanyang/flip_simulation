@@ -179,12 +179,6 @@ def inject_instant_restart():
     gdb.execute("set $pc = 0xE7F000F0")
     # global_writer.write_other()
 
-def now():
-    text = qemu_hmp("info vtime")
-    assert text.startswith("virtual time: ") and text.endswith(" ns") and text.count(" ") == 3, \
-        "invalid output: %r" % text
-    return int(text.split(" ")[2])
-
 def step_ns(ns):
     qemu_hmp("cont")
     qemu_hmp("stop_delayed %s" % ns)
