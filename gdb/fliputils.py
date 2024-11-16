@@ -3,7 +3,7 @@ import random
 import re
 import time
 import csv
-import logging
+import uuid
 
 class MemoryRange:
     def __init__(self, start, end, priority, kind, name):
@@ -410,22 +410,23 @@ def snapinject(args):
     previous VM state.
     """
     args = args.strip().split(" ")
-    if len(args) != 6 or args[3] not in ("ram", "reg"):
+    if len(args) > 6 or args[3] not in ("ram", "reg"):
         print("usage: snapinject <total_fault_number> <min_interval> <max_interval> <fault_type> <observe_time>")
         print("                     [snapshot_tag]")
         print("Record the current VM state, then automatically inject faults according to the user-provided")
         print("fault count, fault type, and fault interval. After the faults are injected, wait for a while")
-        print("and then revert to the previous VM state. If snapshot_tag is not None, do not create new snap,")
-        print("and back to this snap after injections.")
+        print("and then revert to the previous VM state, delete the tmp checkpoint.")
+        print("If snapshot_tag is specified, do not create new checkpoint, and DO NOT revert to the checkpoint.")
         return
 
     times, mint, maxt, ftype = autoinject_parser(args)
     obtime = parse_time(args[4])
+    tmpname = uuid.uuid4()
 
-    snapname = args[5] if args[5] else "snapshot"
-    if snapname == "snapshot":
+    snapname = args[5] if args[5:] else tmpname
+    if snapname == tmpname:
         qemu_hmp("savevm %s" % snapname)
-        print("Create a tmp checkpoint `snapshot`")
+        print("Create a tmp checkpoint %s" % snapname)
     else:
         qemu_hmp("loadvm %s" % snapname)
         print("Load checkpoint %s" % snapname)
@@ -440,11 +441,10 @@ def snapinject(args):
     step_ns(obtime)
     print("time up.")
 
-    # Revert to the previous VM state
-    qemu_hmp("loadvm %s" % snapname)
-    print("Back to checkpoint %s finished." % snapname)
-    
-    if snapname == "snapshot":
+    if snapname == tmpname:
+        # Revert to the previous VM state
+        qemu_hmp("loadvm %s" % snapname)
+        print("Back to checkpoint %s finished." % snapname)
         # Del this tmp VM checkpoint
-        qemu_hmp("delvm snapshot")
+        qemu_hmp("delvm %s" % tmpname)
         print("Delete tmp VM checkpoint")
