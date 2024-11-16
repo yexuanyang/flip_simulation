@@ -168,12 +168,12 @@ def inject_register_bitflip(register_name, bit=None):
 
         # random pick upper 64 or lower 64
         index = random.randint(0, 1)
-        oldval = int(gdb.execute("p/x ((int64_t[2])$%s)[%d]" % (register_name, index), to_string=True)
-                     .split("=")[1].strip(), 16)
+        oldval = int(gdb.execute("p ((int64_t[2])$%s)[%d]" % (register_name, index), to_string=True)
+                     .split("=")[1].strip())
         newval = oldval ^ (1 << bit)
         gdb.execute("set ((int64_t[2])$%s)[%d] = %d" % (register_name, index, newval))
-        rrval = int(gdb.execute("p/x ((int64_t[2])$%s)[%d]" % (register_name, index), to_string=True)
-                    .split("=")[1].strip(), 16)
+        rrval = int(gdb.execute("p ((int64_t[2])$%s)[%d]" % (register_name, index), to_string=True)
+                    .split("=")[1].strip())
     else:
         # normal register, 64 bits
         assert value.type.sizeof == 8, "invalid general register size: %u" % value.type.sizeof
@@ -186,12 +186,12 @@ def inject_register_bitflip(register_name, bit=None):
         log_single(register_name, hex(oldval), hex(rrval))
         return True
     elif (oldval & bitmask) == (rrval & bitmask):
-        print("Bitflip could not be injected into register %s. (%x -> %x ignored.)"
-              % (register_name, oldval, newval))
+        print("Bitflip could not be injected into register %s. (%s -> %s ignored.)"
+              % (register_name, hex(oldval), hex(newval)))
         return False
     else:
-        raise RuntimeError("double-mismatched register values on register %s: o=%x n=%x rr=%x"
-                           % (register_name, oldval, newval, rrval))
+        raise RuntimeError("double-mismatched register values on register %s: o=%s n=%s rr=%s"
+                           % (register_name, hex(oldval), hex(newval), hex(rrval)))
     
 def inject_reg_internal(register_name, bit=None):
     registers = [r.name for r, nb in list_registers()]
@@ -353,6 +353,24 @@ def loginject(args):
 
     init_logger(args[0])
 
+def autoinject_parser(args):
+    times = int(args[0])
+    assert times >= 1, "fatal: times < 1"
+    mint = parse_time(args[1])
+    maxt = parse_time(args[2])
+    assert 0 < mint <= maxt, "fatal: min_interval > max_interval"
+    ftype = args[3]
+    return times, mint, maxt, ftype
+
+def autoinject_inner(times, mint, maxt, ftype):
+    for _ in range(times):
+        step_ns(random.randint(mint, maxt))
+
+        if ftype == "reg":
+            inject_reg_internal(None)
+        elif ftype == "ram":
+            inject_bitflip(sample_address(), 1)
+
 @BuildCmd
 def autoinject(args):
     """
@@ -376,21 +394,57 @@ def autoinject(args):
         print("Fault type should be 'ram' or 'reg'")
         return
 
-    times = int(args[0])
-    assert times >= 1, "times < 1"
-    mint = parse_time(args[1])
-    maxt = parse_time(args[2])
-    assert 0 < mint <= maxt, "min_interval > max_interval"
-    ftype = args[3]
+    times, mint, maxt, ftype = autoinject_parser(args)
 
     stime = time.time()
-    for _ in range(times):
-        step_ns(random.randint(mint, maxt))
-
-        if ftype == "reg":
-            inject_reg_internal(None)
-        elif ftype == "ram":
-            inject_bitflip(sample_address(), 1)
+    autoinject_inner(times, mint, maxt, ftype)
     etime = time.time()
     duration = etime - stime
     print("Total injection duration: %.3f s" % duration)
+
+@BuildCmd
+def snapinject(args):
+    """
+    Record the current VM state, then automatically inject faults according to the user-provided fault count,
+    fault type, and fault interval. After the faults are injected, wait for a while and then revert to the
+    previous VM state.
+    """
+    args = args.strip().split(" ")
+    if len(args) != 6 or args[3] not in ("ram", "reg"):
+        print("usage: snapinject <total_fault_number> <min_interval> <max_interval> <fault_type> <observe_time>")
+        print("                     [snapshot_tag]")
+        print("Record the current VM state, then automatically inject faults according to the user-provided")
+        print("fault count, fault type, and fault interval. After the faults are injected, wait for a while")
+        print("and then revert to the previous VM state. If snapshot_tag is not None, do not create new snap,")
+        print("and back to this snap after injections.")
+        return
+
+    times, mint, maxt, ftype = autoinject_parser(args)
+    obtime = parse_time(args[4])
+
+    snapname = args[5] if args[5] else "snapshot"
+    if snapname == "snapshot":
+        qemu_hmp("savevm %s" % snapname)
+        print("Create a tmp checkpoint `snapshot`")
+    else:
+        qemu_hmp("loadvm %s" % snapname)
+        print("Load checkpoint %s" % snapname)
+
+    stime = time.time()
+    autoinject_inner(times, mint, maxt, ftype)
+    etime = time.time()
+    duration = etime - stime
+    print("Total injection duration: %.3f s" % duration)
+
+    print("Observing VM %s" % args[4])
+    step_ns(obtime)
+    print("time up.")
+
+    # Revert to the previous VM state
+    qemu_hmp("loadvm %s" % snapname)
+    print("Back to checkpoint %s finished." % snapname)
+    
+    if snapname == "snapshot":
+        # Del this tmp VM checkpoint
+        qemu_hmp("delvm snapshot")
+        print("Delete tmp VM checkpoint")
