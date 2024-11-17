@@ -9,6 +9,7 @@
 # ==============================================================================
 
 from utils import *
+import random
 
 if __name__ == '__main__':
     address_dict = extract('iomem.txt')
@@ -18,6 +19,9 @@ if __name__ == '__main__':
 
     areas = list(address_dict.keys())
     flip_time = 0
+    
+    gdbmi = GdbController()
+
     """
     Except there will be 10 bits flip occur in 1 GB RAM per month.
     For 5 years and 16 GB RAM machine in space, there will be 5 * 12 * 16 * 10 = 9600 times flip.
@@ -29,7 +33,11 @@ if __name__ == '__main__':
     """
     for area in areas:
         while flip_time < 4800:
-            flip_bit_in_area(address_dict, area)
+            flip_bit_in_area(address_dict, area, gdbmi)
             flip_time += 1
+            # sleep_time = random.randint(1, 5)
+            # time.sleep(sleep_time)
             time.sleep(0.345)
+
+    gdbmi.exit()
     

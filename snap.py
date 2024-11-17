@@ -10,12 +10,18 @@
 # ==============================================================================
 
 from utils import *
+import uuid
+
+tmpname = uuid.uuid4()
 
 if __name__ == '__main__':
     address_dict = extract('iomem.txt')
-    vm_action('save')
-    for i in range(10):
-        flip_bit_in_area(address_dict, 'System RAM')
-        time.sleep(10 * 60)
-        vm_action('load')
-    vm_action('del')
+    vm_action('savevm', tmpname)
+    print(f"savevm {tmpname}")
+    # for i in range(10):
+        # flip_bit_in_area(address_dict, 'System RAM')
+        # time.sleep(10 * 60)
+        # vm_action('loadvm', tmpname)
+    time.sleep(10)
+    vm_action('delvm', tmpname)
+    print(f"delvm {tmpname}")

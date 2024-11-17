@@ -1,5 +1,5 @@
 #!/bin/bash
-rust-gdb -q \
+gdb -q \
 -ex 'set logging enable on' \
 -ex 'target remote:1234' \
 -ex 'maintenance packet Qqemu.PhyMemMode:1' \
