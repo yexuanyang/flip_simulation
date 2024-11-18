@@ -10,18 +10,7 @@
 # ==============================================================================
 
 from utils import *
-import uuid
-
-tmpname = uuid.uuid4()
 
 if __name__ == '__main__':
-    address_dict = extract('iomem.txt')
-    vm_action('savevm', tmpname)
-    print(f"savevm {tmpname}")
-    # for i in range(10):
-        # flip_bit_in_area(address_dict, 'System RAM')
-        # time.sleep(10 * 60)
-        # vm_action('loadvm', tmpname)
-    time.sleep(10)
-    vm_action('delvm', tmpname)
-    print(f"delvm {tmpname}")
+    # snapinject_ram(4800, 0.345 * 1e9, 0.345 * 1e9, 2 * 60, 10)
+    snapinject_ram(3, 1 * 1e9, 2 * 1e9, 10, 2)

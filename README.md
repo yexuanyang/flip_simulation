@@ -12,6 +12,8 @@
 
 **gdb.sh** will be execute by gdb.py using python3 `subprocess.run()`
 
+**gdb/fliputils.py** provides some user-defined commands for gdb.
+
 # Usage
 
 Simulate the random bits flip in qemu guest machine with gdb.
@@ -100,7 +102,9 @@ Reference:
 
 Just `cp` or `mv` the code you cloned before to the shared directory.
 
-## Run scripts in sequence
+## Inject the faults in the qemu guest machine
+
+### Method-1: Run scripts in sequence
 
 Firstly run `get_iomem.sh` in qemu guest machine to get `iomem.txt`
 
@@ -110,8 +114,24 @@ Thirdly run `python3 snap.py` in the host machine to tests the failure rate of a
 
 **Note**: Detach gdb server before `python3 gdb.py`, otherwise it will blocked because 1234 port is used.
 
+**Note**: You can modify `gdb.py` to change the flip area, the flip bits, the flip times, etc.
+
+### Method-2: Use the user-defined commands in gdb
+
+Firstly run `get_iomem.sh` in qemu guest machine to get `iomem.txt`
+
+Secondly run `gdb` in the host machine and run `source gdb/fliputils.py` in gdb to load the user-defined commands.
+
+Thirdly use `autoinject` or `snapinject` in gdb to simulate the bits flip.
+
+**Note**: More details about the user-defined commands can be found in `gdb/fliputils.py`.
+
 ## Store the panic message when kernel panic
 
 In QEMU, run `echo 8 > /proc/sys/kernel/printk` to get all message in stdout.
 
 Before start QEMU, add `| tee <some-file>` at the end of command to store all content that showed in stdout and that you put in stdin in QEMU at file `<some-file>`.
+
+# Latency & Overhead between different flipping methods
+
+Currently, the forms of simulated flipping include external flipping using scripts and built-in flipping mode using user-defined commands in gdb. The granularity of the interval between two flippings of external flipping can only reach the second level, while the granularity of the interval between two flippings of built-in flipping can reach the millisecond level. Because built-in flipping is implemented using gdb python api and QEMU's built-in timer, the only error is that after the QEMU built-in timer times out, the callback function needs to be executed, and then QEMU returns to the paused state, which takes about 50us. Because external flipping uses scripts to execute gdb to connect to QEMU's gdbserver or uses gdbcontroller in the pygdbmi library to connect to gdbserver to execute the corresponding commands, the delay of the two operations is tens or hundreds of milliseconds. However, the external method takes less time to complete the flip than the built-in method. For example, it takes more than 20s to execute `autoinject 10 20ns 100ns ram` in GDB, but it only takes more than 10s to use the external method. If you need to specify a fine-grained flipping interval, it is recommended to use the GDB command method. If this is not necessary, it is recommended to use a faster external reversal method.
