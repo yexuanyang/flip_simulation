@@ -373,17 +373,15 @@ def autoinject_inner(times, mint, maxt, ftype):
 
 @BuildCmd
 def autoinject(args):
-    """
-    Automatically inject fault into the VM accroding to the provided inject type. 
-    Cause `total_fault_number` faults with a random cycle between `min_interval` and `max_interval`,
-    fault type is `fault_type`
+    """Automatically inject fault into the VM accroding to the provided inject type. 
+Cause `total_fault_number` faults with a random cycle between `min_interval` and `max_interval`,
+fault type is `fault_type`
 
-    Format: `autoinject <total_fault_number> <min_interval> <max_interval> <fault_type>`
-    
-    Supported types:
-    1. ram: inject fault in RAM
-    2. reg: inject fault in Registers
-    """
+Usage: `autoinject <total_fault_number> <min_interval> <max_interval> <fault_type>`
+
+Supported types:
+1. ram: inject fault in RAM
+2. reg: inject fault in Registers"""
 
     args = args.strip().split(" ")
     if len(args) != 4 or args[3] not in ("ram", "reg"):
@@ -404,11 +402,20 @@ def autoinject(args):
 
 @BuildCmd
 def snapinject(args):
-    """
-    Record the current VM state, then automatically inject faults according to the user-provided fault count,
-    fault type, and fault interval. After the faults are injected, wait for a while and then revert to the
-    previous VM state.
-    """
+    """Record the current VM state, then automatically inject faults according to the user-provided fault count,
+fault type, and fault interval. After the faults are injected, wait for a while and then revert to the
+previous VM state, delete the tmp checkpoint.
+If snapshot_tag is specified, do not create new checkpoint, and DO NOT revert to the checkpoint.
+
+Usage: snapinject <total_fault_number> <min_interval> <max_interval> <fault_type> <observe_time> [snapshot_tag]
+
+Supported time units: default is ns. Time format: 10s, 244ms and etc.
+1. ns: nanosecond
+2. us: microsecond
+3. ms: millisecond
+4. s: second
+5. m: minute"""
+
     args = args.strip().split(" ")
     if len(args) > 6 or args[3] not in ("ram", "reg"):
         print("usage: snapinject <total_fault_number> <min_interval> <max_interval> <fault_type> <observe_time>")
@@ -448,3 +455,14 @@ def snapinject(args):
         # Del this tmp VM checkpoint
         qemu_hmp("delvm %s" % tmpname)
         print("Delete tmp VM checkpoint")
+
+@BuildCmd
+def loop(args):
+    """Loop a action for provide times
+Usage: loop <times> <command> <args>
+    """
+    args = args.strip().split(" ", 1)
+    times = int(args[0])
+    actions = args[1]
+    for _ in range(times):
+        gdb.execute(actions)

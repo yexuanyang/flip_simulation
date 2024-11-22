@@ -12,7 +12,6 @@ import uuid
 
 from pygdbmi.gdbcontroller import GdbController
 
-
 def extract(file) -> dict:
     """
     Extract the /proc/iomem file and return a dictionary with the following format:
@@ -56,7 +55,7 @@ def flip_bit_in_area(address_dict, area, gdbmi: GdbController=None):
     if gdbmi:
         # attached to qemu gdb server
         commands = ["set logging enable on", "target remote:1234", "maintenance packet Qqemu.PhyMemMode:1"]
-        gdbmi.write(commands)
+        gdbmi.write(commands, timeout_sec=3, read_response=False)
 
         # 
         # response example:
@@ -65,10 +64,10 @@ def flip_bit_in_area(address_dict, area, gdbmi: GdbController=None):
         # {'type': 'result', 'message': 'done', 'payload': None, 'token': None, 'stream': 'stdout'}]
         #
         oldvalue = gdbmi.write(f'x/bx 0x{random_address:x}')[1]['payload'].split(":")[1].strip()
-        gdbmi.write(f'set *0x{random_address:x}^=1<<{random_bit}')
+        gdbmi.write(f'set *0x{random_address:x}^=1<<{random_bit}', read_response=False)
         newvalue = gdbmi.write(f'x/bx 0x{random_address:x}')[1]['payload'].split(":")[1].strip()
         # detach to make qemu running
-        gdbmi.write("detach")
+        gdbmi.write("detach", read_response=False)
         print(f'Inject fault at physical address 0x{random_address:x} in area {area}, old={oldvalue}, new={newvalue}')
     else:
         command_list = []
@@ -86,7 +85,7 @@ def vm_action(action, snapname, gdbmi: GdbController=None):
     if gdbmi:
         commands = ["set logging enable on", "target remote:1234", "maintenance packet Qqemu.PhyMemMode:1",
                     f"monitor {action} {snapname}", "detach"]
-        gdbmi.write(commands)
+        gdbmi.write(commands, read_response=False)
     else:
         command_list = []
         command_list.append(f'monitor {action} {snapname}\n')

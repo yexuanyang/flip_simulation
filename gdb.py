@@ -22,6 +22,8 @@ if __name__ == '__main__':
     Because every flip takes 0.5s in program so the program will run 40 minutes.
     """
     # autoinject_ram(4800, 0.345 * 1e9, 0.345 * 1e9)
+
+    # Simple test suite to get the flip latency
     st = time.time()
     autoinject_ram(100, 20, 50)
     et = time.time()
