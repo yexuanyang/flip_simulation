@@ -86,13 +86,13 @@ def mtree():
     for line in lines:
         line = line.rstrip()
         if line.startswith("FlatView #"):
-            curnames = []
+            curnames = set()
             scanning = False
         elif line.startswith(' AS "'):
             assert line.count('"') == 2, "invalid AS line: %r" % line
             assert not scanning, "expected not scanning"
             cn = line.split('"')[1]
-            curnames.append(cn)
+            curnames.add(cn)
             views[cn] = []
         elif line.startswith(' Root '):
             assert not scanning, "expected not scanning"
@@ -101,6 +101,7 @@ def mtree():
             assert scanning, "expected scanning"
             for cn in curnames:
                 assert views[cn] == [], "views[cn] is not empty"
+                # curnames is set, so del views[cn] will not raise an error
                 del views[cn]
             curnames = None
         elif line.startswith('  '):
@@ -109,7 +110,6 @@ def mtree():
                 views[name].append(line)
         else:
             assert not line, "unexpected line: %r" % line
-
     return {name: FlatView.parse(body) for name, body in views.items()}
 
 cached_reg_list = None
