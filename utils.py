@@ -55,7 +55,8 @@ def flip_bit_in_area(address_dict, area, gdbmi: GdbController=None):
     if gdbmi:
         # attached to qemu gdb server
         commands = ["set logging enable on", "target remote:1234", "maintenance packet Qqemu.PhyMemMode:1"]
-        gdbmi.write(commands, timeout_sec=3, read_response=False)
+        # set read_response to clean the buffer, make sure the next command get clean response in buffer
+        gdbmi.write(commands, timeout_sec=3)
 
         # 
         # response example:
@@ -64,10 +65,10 @@ def flip_bit_in_area(address_dict, area, gdbmi: GdbController=None):
         # {'type': 'result', 'message': 'done', 'payload': None, 'token': None, 'stream': 'stdout'}]
         #
         oldvalue = gdbmi.write(f'x/bx 0x{random_address:x}')[1]['payload'].split(":")[1].strip()
-        gdbmi.write(f'set *0x{random_address:x}^=1<<{random_bit}', read_response=False)
+        gdbmi.write(f'set *0x{random_address:x}^=1<<{random_bit}', read_response=True)
         newvalue = gdbmi.write(f'x/bx 0x{random_address:x}')[1]['payload'].split(":")[1].strip()
         # detach to make qemu running
-        gdbmi.write("detach", read_response=False)
+        gdbmi.write("detach", read_response=True)
         print(f'Inject fault at physical address 0x{random_address:x} in area {area}, old={oldvalue}, new={newvalue}')
     else:
         command_list = []
@@ -85,7 +86,7 @@ def vm_action(action, snapname, gdbmi: GdbController=None):
     if gdbmi:
         commands = ["set logging enable on", "target remote:1234", "maintenance packet Qqemu.PhyMemMode:1",
                     f"monitor {action} {snapname}", "detach"]
-        gdbmi.write(commands, read_response=False)
+        gdbmi.write(commands, timeout_sec=5)
     else:
         command_list = []
         command_list.append(f'monitor {action} {snapname}\n')
@@ -116,7 +117,7 @@ def snapinject_ram(fault_number, min_interval, max_interval, observe_time, loop 
     fault interval. After the faults are injected, wait for a while and then revert to the
     previous VM state. 
     """
-    tmpname = uuid.uuid4()
+    tmpname = uuid.uuid4().hex
     gdbmi = GdbController()
 
     vm_action('savevm', tmpname, gdbmi)
@@ -127,6 +128,7 @@ def snapinject_ram(fault_number, min_interval, max_interval, observe_time, loop 
         time.sleep(observe_time)
         vm_action('loadvm', tmpname, gdbmi)
 
+    # WARN: If QEMU shutdown before this vm_action, snapshot will not delete correctly.
     vm_action('delvm', tmpname, gdbmi)
 
     gdbmi.exit()
