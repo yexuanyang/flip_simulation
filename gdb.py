@@ -8,7 +8,7 @@
 # Date: 2024-10-18
 # ==============================================================================
 
-from utils import *
+from fliputils import *
 import time
 
 if __name__ == '__main__':

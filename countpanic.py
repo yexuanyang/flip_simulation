@@ -2,6 +2,7 @@ import json
 import socket
 import pexpect
 import time
+import threading
 
 class SocketClient:
     def __init__(self, server_address, need_revert=False, telnethost=None, telnetport=None, snapname=None):
@@ -157,6 +158,13 @@ def parse_json_objects(buffer):
             # incomplete json object, parse it the next time
             break
     return results, buffer
+
+def count_panic(sockfile):
+    print("start listening...")
+    socketc = SocketClient(sockfile)
+    socketc.send('{"execute": "qmp_capabilities"}')
+    socketc.listen()
+    print("panic count: " + str(socketc.panic))
 
 if __name__=="__main__":
     ssh_client = SshClient("localhost", 2222, "root", "519ailab")
