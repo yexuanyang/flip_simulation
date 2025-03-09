@@ -86,13 +86,13 @@ def mtree():
     for line in lines:
         line = line.rstrip()
         if line.startswith("FlatView #"):
-            curnames = []
+            curnames = set()
             scanning = False
         elif line.startswith(' AS "'):
             assert line.count('"') == 2, "invalid AS line: %r" % line
             assert not scanning, "expected not scanning"
             cn = line.split('"')[1]
-            curnames.append(cn)
+            curnames.add(cn)
             views[cn] = []
         elif line.startswith(' Root '):
             assert not scanning, "expected not scanning"
@@ -101,6 +101,7 @@ def mtree():
             assert scanning, "expected scanning"
             for cn in curnames:
                 assert views[cn] == [], "views[cn] is not empty"
+                # curnames is set, so del views[cn] will not raise an error
                 del views[cn]
             curnames = None
         elif line.startswith('  '):
@@ -109,7 +110,6 @@ def mtree():
                 views[name].append(line)
         else:
             assert not line, "unexpected line: %r" % line
-
     return {name: FlatView.parse(body) for name, body in views.items()}
 
 cached_reg_list = None
@@ -353,6 +353,57 @@ def loginject(args):
 
     init_logger(args[0])
 
+@BuildCmd
+def inject_range(args):
+    """Inject bitflips at addresses within specified ranges."""
+
+    args = args.strip().split(" ")
+    if len(args) < 3:
+        print("usage: inject_range <bytewidth> <mode> <range1> [<range2> ...] [<num_errors>]")
+        print("Each range should be specified as start-end (e.g., 0x1000-0x1FFF)")
+        print("Mode should be 'sequential' or 'random'. If 'random', specify the number of errors to inject.")
+        return
+
+    bytewidth = int(args[0])
+    mode = args[1]
+    if bytewidth < 1:
+        print("invalid bytewidth")
+        return
+
+    ranges = []
+    for arg in args[2:]:
+        if '-' in arg:
+            try:
+                start, end = map(lambda x: int(x, 16), arg.split('-'))
+                if start >= end:
+                    raise ValueError
+                ranges.append((start, end))
+            except ValueError:
+                print(f"invalid range: {arg}")
+                return
+        else:
+            num_errors = int(arg)
+
+    if mode == "sequential":
+        for start, end in ranges:
+            for address in range(start, end + 1, bytewidth):
+                inject_bitflip(address, bytewidth)
+    elif mode == "random":
+        if 'num_errors' not in locals():
+            print("usage: inject_range <bytewidth> random <range1> [<range2> ...] <num_errors>")
+            return
+        all_addresses = []
+        for start, end in ranges:
+            all_addresses.extend(range(start, end + 1, bytewidth))
+        if num_errors > len(all_addresses):
+            print("Number of errors exceeds the number of available addresses.")
+            return
+        random_addresses = random.sample(all_addresses, num_errors)
+        for address in random_addresses:
+            inject_bitflip(address, bytewidth)
+    else:
+        print("Invalid mode. Use 'sequential' or 'random'.")
+
 def autoinject_parser(args):
     times = int(args[0])
     assert times >= 1, "fatal: times < 1"
@@ -466,3 +517,5 @@ Usage: loop <times> <command> <args>
     actions = args[1]
     for _ in range(times):
         gdb.execute(actions)
+
+
