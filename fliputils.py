@@ -54,18 +54,27 @@ def flip_bit_in_area(address_dict, area, gdbmi: GdbController=None):
 
     if gdbmi:
         # attached to qemu gdb server
-        commands = ["set logging enable on", "target remote:1234", "maintenance packet Qqemu.PhyMemMode:1"]
-        gdbmi.write(commands, timeout_sec=3, read_response=False)
-
+        commands = ["set logging enable on", "target remote:1234", "maintenance packet Qqemu.PhyMemMode:1", f'x/bx 0x{random_address:x}', 
+                    f'set *0x{random_address:x}^=1<<{random_bit}', f'x/bx 0x{random_address:x}']
+        # set read_response to clean the buffer, make sure the next command get clean response in buffer
         # 
-        # response example:
+        # gdbmi.write response example:
         #[{'type': 'log', 'message': None, 'payload': 'x/bx 0x40001000\n', 'stream': 'stdout'}, 
         # {'type': 'console', 'message': None, 'payload': '0x40001000:\t0x6d\n', 'stream': 'stdout'}, 
         # {'type': 'result', 'message': 'done', 'payload': None, 'token': None, 'stream': 'stdout'}]
         #
-        oldvalue = gdbmi.write(f'x/bx 0x{random_address:x}')[1]['payload'].split(":")[1].strip()
-        gdbmi.write(f'set *0x{random_address:x}^=1<<{random_bit}', read_response=False)
-        newvalue = gdbmi.write(f'x/bx 0x{random_address:x}')[1]['payload'].split(":")[1].strip()
+        gdbmi.write(commands, read_response=False)
+
+        data = gdbmi.get_gdb_response(timeout_sec=10)
+        value = []
+        for item in data:
+            payload = item.get('payload')
+            if isinstance(payload, str) and payload.startswith('0x') and ':' in payload:
+                value.append(payload.split(':')[1].strip())
+
+        oldvalue = value[0] if value[0:] else None
+        newvalue = value[1] if value[1:] else None
+
         # detach to make qemu running
         gdbmi.write("detach", read_response=False)
         print(f'Inject fault at physical address 0x{random_address:x} in area {area}, old={oldvalue}, new={newvalue}')
@@ -85,7 +94,7 @@ def vm_action(action, snapname, gdbmi: GdbController=None):
     if gdbmi:
         commands = ["set logging enable on", "target remote:1234", "maintenance packet Qqemu.PhyMemMode:1",
                     f"monitor {action} {snapname}", "detach"]
-        gdbmi.write(commands, read_response=False)
+        gdbmi.write(commands, timeout_sec=5, read_response=False)
     else:
         command_list = []
         command_list.append(f'monitor {action} {snapname}\n')
@@ -94,7 +103,7 @@ def vm_action(action, snapname, gdbmi: GdbController=None):
         subprocess.run(['./gdb.sh'], check=True, stdout=subprocess.DEVNULL)
     print(f"{action} {snapname}")
 
-def autoinject_ram(fault_number, min_interval, max_interval, area: str = "System RAM", gdbmi: GdbController=None):
+def autoinject_ram(fault_number: int, min_interval: int, max_interval: int, area: str = "System RAM", gdbmi: GdbController=None):
     """Automatically inject faults into RAM, interval unit is nanosecond"""
     address_dict = extract('iomem.txt')
     print("current qemu ram mapping is:")
@@ -110,13 +119,14 @@ def autoinject_ram(fault_number, min_interval, max_interval, area: str = "System
     if shouldexit:
         gdbmi.exit()
 
-def snapinject_ram(fault_number, min_interval, max_interval, observe_time, loop = 1):
+def snapinject_ram(fault_number: int, min_interval: int, max_interval: int, observe_time: int, loop = 1):
     """
     Record the current VM state, then automatically inject faults according to the user-provided fault count and 
     fault interval. After the faults are injected, wait for a while and then revert to the
     previous VM state. 
     """
-    tmpname = uuid.uuid4()
+    # tmpname = uuid.uuid4().hex
+    tmpname = "snapinject_begin"
     gdbmi = GdbController()
 
     vm_action('savevm', tmpname, gdbmi)
@@ -127,6 +137,7 @@ def snapinject_ram(fault_number, min_interval, max_interval, observe_time, loop 
         time.sleep(observe_time)
         vm_action('loadvm', tmpname, gdbmi)
 
+    # WARN: If QEMU shutdown before this vm_action, snapshot will not delete correctly.
     vm_action('delvm', tmpname, gdbmi)
 
     gdbmi.exit()

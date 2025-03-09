@@ -9,8 +9,13 @@
 # Date: 2024-10-18
 # ==============================================================================
 
-from utils import *
+from fliputils import *
+from countpanic import *
+import threading
 
 if __name__ == '__main__':
     # snapinject_ram(4800, 0.345 * 1e9, 0.345 * 1e9, 2 * 60, 10)
-    snapinject_ram(3, 1 * 1e9, 2 * 1e9, 10, 2)
+    counter = threading.Thread(target=count_panic, args=("/tmp/qmp.sock",))
+    counter.start()
+    snapinject_ram(1, 1 * 1e9, 2 * 1e9, 10, 6)
+    counter.join()

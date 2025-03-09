@@ -8,7 +8,7 @@
 # Date: 2024-10-18
 # ==============================================================================
 
-from utils import *
+from fliputils import *
 import time
 
 if __name__ == '__main__':
@@ -21,7 +21,7 @@ if __name__ == '__main__':
     We simulate 8G machine in 5 years, in other word we simulate 4800 times flip. 
     Because every flip takes 0.5s in program so the program will run 40 minutes.
     """
-    # autoinject_ram(4800, 0.345 * 1e9, 0.345 * 1e9)
+    # autoinject_ram(4800, 0.345 * 1e9, 0.345 * 1e9, area="Kernel Code")
 
     # Simple test suite to get the flip latency
     st = time.time()
