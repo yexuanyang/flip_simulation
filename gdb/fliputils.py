@@ -108,64 +108,6 @@ def inject(args):
 
 
 @BuildCmd
-def inject_range(args):
-    """Inject bitflips at addresses within specified ranges."""
-
-    args = args.strip().split(" ")
-    if len(args) < 3:
-        print(
-            "usage: inject_range <bytewidth> <mode> <range1> [<range2> ...] [<num_errors>]"
-        )
-        print("Each range should be specified as start-end (e.g., 0x1000-0x1FFF)")
-        print(
-            "Mode should be 'sequential' or 'random'. If 'random', specify the number of errors to inject."
-        )
-        return
-
-    bytewidth = int(args[0])
-    mode = args[1]
-    if bytewidth < 1:
-        print("invalid bytewidth")
-        return
-
-    ranges = []
-    for arg in args[2:]:
-        if "-" in arg:
-            try:
-                start, end = map(lambda x: int(x, 16), arg.split("-"))
-                if start >= end:
-                    raise ValueError
-                ranges.append((start, end))
-            except ValueError:
-                print(f"invalid range: {arg}")
-                return
-        else:
-            num_errors = int(arg)
-
-    if mode == "sequential":
-        for start, end in ranges:
-            for address in range(start, end + 1, bytewidth):
-                inject_bitflip(address, bytewidth)
-    elif mode == "random":
-        if "num_errors" not in locals():
-            print(
-                "usage: inject_range <bytewidth> random <range1> [<range2> ...] <num_errors>"
-            )
-            return
-        all_addresses = []
-        for start, end in ranges:
-            all_addresses.extend(range(start, end + 1, bytewidth))
-        if num_errors > len(all_addresses):
-            print("Number of errors exceeds the number of available addresses.")
-            return
-        random_addresses = random.sample(all_addresses, num_errors)
-        for address in random_addresses:
-            inject_bitflip(address, bytewidth)
-    else:
-        print("Invalid mode. Use 'sequential' or 'random'.")
-
-
-@BuildCmd
 def inject_reg(args):
     """Inject a bitflip into a register.
     usage: inject_reg [--register <register name>] [--bit <bit index>]
@@ -544,3 +486,277 @@ def send_qemu_serial(args):
     parsed = parse_args_safely(parser, args)
     data = parsed.data
     send_to_qemu_serial(data)
+
+
+@BuildCmd
+def rangeinject(args):
+    """Inject bitflips within a custom address range with random or sequential injection.
+    Supports loading VM snapshot before injection for reproducible testing.
+    Allows excluding specific memory ranges from injection.
+
+    Usage: rangeinject --start-address <addr> --end-address <addr> --total-fault-number <num> --min-interval <time> --max-interval <time> [--injection-mode <mode>] [--bytewidth <width>] [--bit-index <bit>] [--snapshot-tag <tag>] [--observe-time <time>] [--exclude-ranges <ranges>]
+
+    Example:
+        rangeinject --start-address 0x1000000 --end-address 0x2000000 --total-fault-number 100 --min-interval 10ms --max-interval 50ms --injection-mode random --snapshot-tag my_checkpoint --observe-time 5s
+        rangeinject --start-address 0x1000000 --end-address 0x2000000 --total-fault-number 100 --min-interval 10ms --max-interval 50ms --injection-mode sequential --bytewidth 4 --bit-index 3 --snapshot-tag test_state --observe-time 10s
+        rangeinject --start-address 0x1000000 --end-address 0x2000000 --total-fault-number 100 --min-interval 10ms --max-interval 50ms --exclude-ranges "0x1500000-0x1600000,0x1800000-0x1900000"
+
+    Parameters:
+    - start-address: Starting address of the injection range
+    - end-address: Ending address of the injection range
+    - total-fault-number: Total number of faults to inject
+    - min-interval: Minimum interval between injections (with unit: ns, us, ms, s, m)
+    - max-interval: Maximum interval between injections (with unit: ns, us, ms, s, m)
+    - injection-mode: "random" (default) or "sequential" injection within the range
+    - bytewidth: Byte width for injection (default: 1)
+    - bit-index: Specific bit to flip (if not specified, randomly selected)
+    - snapshot-tag: VM snapshot to load before injection (optional)
+    - observe-time: Time to observe after all injections are completed (with unit: ns, us, ms, s, m, optional)
+    - exclude-ranges: Comma-separated list of ranges to exclude (format: "start1-end1,start2-end2", e.g., "0x1500000-0x1600000,0x1800000-0x1900000")
+    """
+    parser = argparse.ArgumentParser(
+        description="Inject bitflips within a custom address range",
+        prog="rangeinject",
+    )
+    parser.add_argument(
+        "--start-address",
+        required=True,
+        help="Starting address of the injection range (hex format, e.g., 0x1000000)",
+    )
+    parser.add_argument(
+        "--end-address",
+        required=True,
+        help="Ending address of the injection range (hex format, e.g., 0x2000000)",
+    )
+    parser.add_argument(
+        "--total-fault-number",
+        type=int,
+        required=True,
+        help="Total number of faults to inject",
+    )
+    parser.add_argument(
+        "--min-interval",
+        required=True,
+        help="Minimum interval between injections (with unit: ns, us, ms, s, m)",
+    )
+    parser.add_argument(
+        "--max-interval",
+        required=True,
+        help="Maximum interval between injections (with unit: ns, us, ms, s, m)",
+    )
+    parser.add_argument(
+        "--injection-mode",
+        choices=["random", "sequential"],
+        default="random",
+        help="Injection mode: random (default) or sequential",
+    )
+    parser.add_argument(
+        "--bytewidth",
+        type=int,
+        default=1,
+        help="Byte width for injection (default: 1)",
+    )
+    parser.add_argument(
+        "--bit-index",
+        type=int,
+        help="Specific bit index to flip (if not specified, randomly selected)",
+    )
+    parser.add_argument(
+        "--snapshot-tag",
+        help="VM snapshot to load before injection (optional)",
+    )
+    parser.add_argument(
+        "--observe-time",
+        help="Time to observe after all injections are completed (with unit: ns, us, ms, s, m, optional)",
+    )
+    parser.add_argument(
+        "--exclude-ranges",
+        help="Comma-separated list of ranges to exclude (format: 'start1-end1,start2-end2', e.g., '0x1500000-0x1600000,0x1800000-0x1900000')",
+    )
+
+    parsed = parse_args_safely(parser, args)
+    if parsed is None:
+        return
+
+    try:
+        # Parse and validate address range
+        start_addr = int(parsed.start_address, 16)
+        end_addr = int(parsed.end_address, 16)
+        if start_addr >= end_addr:
+            raise ValueError("Start address must be less than end address")
+
+        # Parse other parameters
+        fault_count = parsed.total_fault_number
+        assert fault_count >= 1, "Total fault number must be >= 1"
+
+        min_interval = parse_time(parsed.min_interval)
+        max_interval = parse_time(parsed.max_interval)
+        assert 0 <= min_interval <= max_interval, "min_interval must be <= max_interval"
+
+        bytewidth = parsed.bytewidth
+        assert bytewidth >= 1, "Byte width must be >= 1"
+
+        injection_mode = parsed.injection_mode
+        bit_index = parsed.bit_index
+        snapshot_tag = parsed.snapshot_tag
+        observe_time = parsed.observe_time
+        exclude_ranges_str = parsed.exclude_ranges
+
+        # Parse exclude ranges if specified
+        exclude_ranges = []
+        if exclude_ranges_str:
+            try:
+                for range_str in exclude_ranges_str.split(","):
+                    range_str = range_str.strip()
+                    if "-" in range_str:
+                        start_str, end_str = range_str.split("-", 1)
+                        exclude_start = int(start_str.strip(), 16)
+                        exclude_end = int(end_str.strip(), 16)
+                        if exclude_start >= exclude_end:
+                            raise ValueError(
+                                f"Invalid exclude range: {range_str} (start >= end)"
+                            )
+                        exclude_ranges.append((exclude_start, exclude_end))
+                    else:
+                        raise ValueError(f"Invalid exclude range format: {range_str}")
+                print(f"Excluding {len(exclude_ranges)} memory ranges from injection")
+                for start, end in exclude_ranges:
+                    print(f"  Exclude: 0x{start:x} - 0x{end:x}")
+            except ValueError as e:
+                print(f"Error parsing exclude ranges: {e}")
+                return
+
+        # Parse observe time if specified
+        if observe_time:
+            observe_ns = parse_time(observe_time)
+            assert observe_ns >= 0, "Observe time must be >= 0"
+        else:
+            observe_ns = None
+
+    except (ValueError, AssertionError) as e:
+        print("Error: %s" % str(e))
+        return
+
+    # Load snapshot if specified
+    if snapshot_tag:
+        print(f"Loading VM snapshot: {snapshot_tag}")
+        try:
+            qemu_hmp("loadvm %s" % snapshot_tag)
+            print(f"Successfully loaded snapshot: {snapshot_tag}")
+        except Exception as e:
+            print(f"Failed to load snapshot {snapshot_tag}: {e}")
+            return
+
+    print(f"Starting range injection from 0x{start_addr:x} to 0x{end_addr:x}")
+    print(
+        f"Mode: {injection_mode}, Fault count: {fault_count}, Byte width: {bytewidth}"
+    )
+    if bit_index is not None:
+        print(f"Target bit index: {bit_index}")
+
+    # Generate target addresses based on injection mode
+    address_range = end_addr - start_addr
+    target_addresses = []
+
+    def is_address_excluded(addr, bytewidth, exclude_ranges):
+        """Check if an address range (addr to addr+bytewidth) overlaps with any exclude range"""
+        addr_end = addr + bytewidth
+        for exclude_start, exclude_end in exclude_ranges:
+            # Check if there's any overlap between [addr, addr_end) and [exclude_start, exclude_end)
+            if addr < exclude_end and addr_end > exclude_start:
+                return True
+        return False
+
+    if injection_mode == "random":
+        # Random injection: generate random addresses within the range, avoiding excluded areas
+        attempts = 0
+        max_attempts = fault_count * 100  # Prevent infinite loop
+
+        while len(target_addresses) < fault_count and attempts < max_attempts:
+            addr = start_addr + random.randint(0, address_range - bytewidth)
+            if not is_address_excluded(addr, bytewidth, exclude_ranges):
+                target_addresses.append(addr)
+            attempts += 1
+
+        if len(target_addresses) < fault_count:
+            print(
+                f"Warning: Could only generate {len(target_addresses)} valid addresses out of {fault_count} requested (excluded ranges may be too large)"
+            )
+    else:  # sequential
+        # Sequential injection: divide range evenly, skipping excluded areas
+        if fault_count > address_range // bytewidth:
+            print(
+                f"Warning: Fault count ({fault_count}) exceeds available addresses in range"
+            )
+            fault_count = address_range // bytewidth
+
+        step_size = max(1, address_range // fault_count)
+        for i in range(fault_count):
+            addr = start_addr + (i * step_size)
+            if addr + bytewidth <= end_addr:
+                if not is_address_excluded(addr, bytewidth, exclude_ranges):
+                    target_addresses.append(addr)
+                else:
+                    # Try to find next valid address
+                    for offset in range(1, step_size):
+                        next_addr = addr + offset
+                        if next_addr + bytewidth <= end_addr:
+                            if not is_address_excluded(
+                                next_addr, bytewidth, exclude_ranges
+                            ):
+                                target_addresses.append(next_addr)
+                                break
+            else:
+                break
+
+    print(
+        f"Generated {len(target_addresses)} valid target addresses (excluded {len(exclude_ranges)} ranges)"
+    )
+
+    # Perform injections
+    stime = time.time()
+    successful_injections = 0
+
+    for i, address in enumerate(target_addresses):
+        try:
+            # Wait for random interval
+            if min_interval < max_interval:
+                wait_time = random.randint(min_interval, max_interval)
+            else:
+                wait_time = min_interval
+
+            if wait_time > 0:
+                step_ns(wait_time)
+
+            # Determine bit to flip
+            if bit_index is not None:
+                bit_to_flip = bit_index
+            else:
+                bit_to_flip = random.randint(0, bytewidth * 8 - 1)
+
+            # Inject bitflip
+            inject_bitflip(address, bytewidth, bit_to_flip)
+            successful_injections += 1
+
+            print(
+                f"Injection {i + 1}/{len(target_addresses)}: 0x{address:x}, bit {bit_to_flip}"
+            )
+
+        except Exception as e:
+            print(f"Injection failed at 0x{address:x}: {e}")
+
+    etime = time.time()
+    duration = etime - stime
+    print(
+        f"Range injection completed: {successful_injections}/{len(target_addresses)} successful"
+    )
+    print(f"Total injection duration: {duration:.3f} s")
+
+    # Observe VM for specified time if requested
+    if observe_ns is not None:
+        print(f"Observing VM for {observe_time}")
+        observe_start = time.time()
+        step_ns(observe_ns)
+        observe_end = time.time()
+        observe_duration = observe_end - observe_start
+        print(f"Observation completed. Observed for {observe_duration:.3f} s")

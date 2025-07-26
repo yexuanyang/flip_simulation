@@ -5,10 +5,11 @@
 # Date: 2024-10-18
 # ==============================================================================
 
+import csv
+import os
 import random
-import time
 import subprocess
-import uuid
+import time
 
 from pygdbmi.gdbcontroller import GdbController
 
@@ -42,7 +43,12 @@ def extract(file) -> dict:
     return address_dict
 
 
-def flip_bit_in_area(address_dict, area, gdbmi: GdbController = None):
+def flip_bit_in_area(
+    address_dict,
+    area,
+    gdbmi: GdbController = None,
+    log_file: str = "fault_injection_log.csv",
+):
     address_start = int(address_dict[area][0][0], base=16)
     address_end = int(address_dict[area][0][1], base=16)
 
@@ -84,6 +90,24 @@ def flip_bit_in_area(address_dict, area, gdbmi: GdbController = None):
         print(
             f"Inject fault at physical address 0x{random_address:x} in area {area}, old={oldvalue}, new={newvalue}"
         )
+
+        # save fault injections result to csv file
+        csv_filename = log_file
+        file_exists = os.path.exists(csv_filename)
+        with open(csv_filename, "a", newline="") as csvfile:
+            fieldnames = ["random_address", "area", "oldvalue", "newvalue"]
+            writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
+            if not file_exists:
+                writer.writeheader()
+            writer.writerow(
+                {
+                    "random_address": f"0x{random_address:x}",
+                    "area": area,
+                    "oldvalue": oldvalue,
+                    "newvalue": newvalue,
+                }
+            )
+
     else:
         command_list = []
         command_list.append(f"x/bx 0x{random_address:x}\n")
@@ -122,6 +146,7 @@ def autoinject_ram(
     max_interval: int,
     area: str = "System RAM",
     gdbmi: GdbController = None,
+    log_file: str = "fault_injection_log.csv",
 ):
     """Automatically inject faults into RAM, interval unit is nanosecond"""
     address_dict = extract("iomem.txt")
@@ -132,7 +157,7 @@ def autoinject_ram(
     gdbmi, shouldexit = (GdbController(), True) if gdbmi is None else (gdbmi, False)
 
     for _ in range(fault_number):
-        flip_bit_in_area(address_dict, area, gdbmi)
+        flip_bit_in_area(address_dict, area, gdbmi, log_file=log_file)
         time.sleep(random.randint(min_interval, max_interval) * 1e-9)
 
     if shouldexit:
@@ -140,7 +165,13 @@ def autoinject_ram(
 
 
 def snapinject_ram(
-    fault_number: int, min_interval: int, max_interval: int, observe_time: int, loop=1
+    fault_number: int,
+    min_interval: int,
+    max_interval: int,
+    observe_time: int,
+    loop: int = 1,
+    area: str = "System RAM",
+    log_file: str = "fault_injection_log.csv",
 ):
     """
     Record the current VM state, then automatically inject faults according to the user-provided fault count and
@@ -154,7 +185,14 @@ def snapinject_ram(
     vm_action("savevm", tmpname, gdbmi)
 
     for _ in range(loop):
-        autoinject_ram(fault_number, min_interval, max_interval, gdbmi=gdbmi)
+        autoinject_ram(
+            fault_number,
+            min_interval,
+            max_interval,
+            gdbmi=gdbmi,
+            area=area,
+            log_file=log_file,
+        )
         print("Observing the machine for %d seconds" % observe_time)
         time.sleep(observe_time)
         vm_action("loadvm", tmpname, gdbmi)

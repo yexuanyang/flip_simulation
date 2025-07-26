@@ -1,0 +1,13 @@
+qemu-system-aarch64 \
+    -cpu cortex-a57 \
+    -machine virt \
+    -nographic -net nic,model=virtio,macaddr=52:54:00:12:34:58 \
+    -net user,hostfwd=::2222-:22 -m 4G \
+    -smp 4 -append "console=ttyAMA0 root=/dev/vda2 rw" \
+    -kernel /root/lava-qemu-flip/pvpanic_Image \
+    -drive file=/root/lava-qemu-flip/rros-rasp.qcow2,format=qcow2,index=0,media=disk \
+    -device pvpanic-pci \
+    -qmp unix:/tmp/qmp.sock,server=on,wait=off \
+    -action shutdown=pause,panic=none \
+    -virtfs local,path=/mnt/shared,mount_tag=host0,security_model=passthrough,id=host0 \
+    -s

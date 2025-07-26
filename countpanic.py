@@ -1,8 +1,8 @@
 import json
 import socket
-import pexpect
 import time
-import threading
+
+import pexpect
 
 
 class SocketClient:
@@ -125,7 +125,7 @@ class SshClient:
         while True:
             try:
                 self.connection = pexpect.spawn(
-                    f"ssh {self.username}@{self.hostname} -p {self.port}"
+                    f'ssh {self.username}@{self.hostname} -p {self.port} -o "StrictHostKeyChecking no"'
                 )
                 self.connection.expect("password:")
                 self.connection.sendline(self.password)
