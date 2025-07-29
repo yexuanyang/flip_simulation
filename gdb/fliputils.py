@@ -1,6 +1,7 @@
 import argparse
 import os
 import random
+import re
 import sys
 import time
 import uuid
@@ -227,10 +228,11 @@ def autoinject(args):
 def snapinject(args):
     """Record the current VM state, then automatically inject faults according to the user-provided fault count, fault location, and fault interval.
     After the faults are injected, wait for a while and then revert to the previous VM state, delete the tmp checkpoint.
-    Usage: snapinject --total-fault-number <num> --min-interval <time> --max-interval <time> --fault-type <type> --fault-location <location> --bit-index <bit> --observe-time <time> [--snapshot-tag <tag>]
+    Usage: snapinject --total-fault-number <num> --min-interval <time> --max-interval <time> --fault-type <type> --fault-location <location> --bit-index <bit> --observe-time <time> [--snapshot-tag <tag>] [--register-category <category>]
     Example:
         snapinject --total-fault-number 10 --min-interval 100ms --max-interval 200ms --fault-type ram --fault-location 0x00500000 --bit-index 1 --observe-time 10s
         snapinject --total-fault-number 10 --min-interval 100ms --max-interval 100ms --fault-type reg --fault-location pc --bit-index 3 --observe-time 10s --snapshot-tag my_snapshot
+        snapinject --total-fault-number 10 --min-interval 100ms --max-interval 100ms --fault-type reg --register-category general --bit-index 3 --observe-time 10s --snapshot-tag my_snapshot
 
     Supported time units: default is ns. Time format: 10s, 244ms and etc.
     1. ns: nanosecond
@@ -241,6 +243,9 @@ def snapinject(args):
     Supported fault type and fault location:
     1. ram, address: inject fault in RAM, location is "address"
     2. reg, regname: inject fault in Registers, target is "regname"
+    Supported register categories (for fault-type reg):
+    1. general: includes x0-x30, pc, sp, cpsr, fpsr, fpcr (AArch64 general-purpose registers)
+    2. control: includes all other registers except general-purpose registers
     """
     parser = argparse.ArgumentParser(
         description="Custom snapshot-based fault injection with specific location",
@@ -290,6 +295,11 @@ def snapinject(args):
         required=True,
         help="The socket file used to send string to qemu serial",
     )
+    parser.add_argument(
+        "--register-category",
+        choices=["general", "control"],
+        help="Register category for fault injection when fault-type is 'reg'. 'general' includes x0-x30, pc, sp, cpsr, fpsr, fpcr. 'control' includes all other registers. If not specified, all registers are considered.",
+    )
 
     parsed = parse_args_safely(parser, args)
     if parsed is None:
@@ -310,12 +320,20 @@ def snapinject(args):
     tmpname = uuid.uuid4()
     location = getattr(parsed, "fault_location")
     bit_index = getattr(parsed, "bit_index")
+    register_category = getattr(parsed, "register_category")
 
     if (location is None and bit_index is not None) and (
         location is not None and bit_index is None
     ):
         print(
             "Error: --bit-index and --fault-location must be both specified or both omitted."
+        )
+        return
+
+    # 检查寄存器类别参数的有效性
+    if ftype == "reg" and register_category is not None and location is not None:
+        print(
+            "Error: --register-category and --fault-location cannot be used together when fault-type is 'reg'. Use either specific register name or register category."
         )
         return
 
@@ -330,7 +348,8 @@ def snapinject(args):
         print("Load checkpoint %s" % snapname)
 
     stime = time.time()
-    if location is None and bit_index is None:
+    if location is None and bit_index is None and register_category is None:
+        # 没有指定具体位置、位索引或寄存器类别，使用原有的随机注入
         autoinject_inner(times, mint, maxt, ftype)
     else:
         for _ in range(times):
@@ -345,7 +364,15 @@ def snapinject(args):
                     print("Error parsing RAM address: %s" % str(e))
                     return
             elif ftype == "reg":
-                inject_register_bitflip(location, bit_index)
+                if register_category is not None:
+                    # 使用寄存器类别注入
+                    inject_reg_by_category(register_category, bit_index)
+                elif location is not None:
+                    # 使用指定寄存器名称注入
+                    inject_register_bitflip(location, bit_index)
+                else:
+                    # 只指定了 bit_index，随机选择寄存器
+                    inject_reg_internal(None, bit_index)
     etime = time.time()
     duration = etime - stime
     print("Total injection duration: %.3f s" % duration)
@@ -760,3 +787,84 @@ def rangeinject(args):
         observe_end = time.time()
         observe_duration = observe_end - observe_start
         print(f"Observation completed. Observed for {observe_duration:.3f} s")
+
+
+def categorize_aarch64_registers():
+    """
+    将 AArch64 寄存器分为通用寄存器和控制寄存器两类
+
+    Returns:
+        tuple: (general_registers, control_registers)
+            general_registers: 通用寄存器列表，包括 x0-x30, pc, sp, cpsr, fpsr, fpcr
+            control_registers: 控制寄存器列表，包括除通用寄存器之外的所有寄存器
+    """
+    # 定义 AArch64 通用寄存器
+    general_register_patterns = [
+        # x0-x30 通用寄存器
+        r'^x([0-9]|[12][0-9]|30)$',
+        # 程序计数器
+        r'^pc$',
+        # 栈指针
+        r'^sp$',
+        # 程序状态寄存器
+        r'^cpsr$',
+        # 浮点状态寄存器
+        r'^fpsr$',
+        # 浮点控制寄存器
+        r'^fpcr$'
+    ]
+
+    # 获取所有可用寄存器
+    register = Registers()
+    all_registers = [r.name for r, nb in register.list_registers()]
+
+    general_registers = []
+    control_registers = []
+
+    for reg_name in all_registers:
+        is_general = False
+        for pattern in general_register_patterns:
+            if re.match(pattern, reg_name, re.IGNORECASE):
+                general_registers.append(reg_name)
+                is_general = True
+                break
+
+        if not is_general:
+            control_registers.append(reg_name)
+
+    return general_registers, control_registers
+
+
+def inject_reg_by_category(category, bit=None):
+    """
+    根据寄存器类别注入错误
+
+    Args:
+        category: 'general' 表示通用寄存器，'control' 表示控制寄存器
+        bit: 要翻转的位索引，如果为 None 则随机选择
+    """
+    general_regs, control_regs = categorize_aarch64_registers()
+
+    if category == 'general':
+        target_registers = general_regs
+    elif category == 'control':
+        target_registers = control_regs
+    else:
+        print(f"Error: Invalid register category '{category}'. Must be 'general' or 'control'.")
+        return
+
+    if not target_registers:
+        print(f"No {category} registers found!")
+        return
+
+    # 随机选择一个目标寄存器
+    random.shuffle(target_registers)
+
+    for reg in target_registers:
+        # 尝试注入直到找到一个可以成功注入的寄存器
+        if inject_register_bitflip(reg, bit):
+            print(f"Successfully injected fault into {category} register: {reg}")
+            break
+        print(f"Trying another {category} register...")
+    else:
+        print(f"Out of {category} registers to try!")

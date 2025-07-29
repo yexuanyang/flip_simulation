@@ -1,7 +1,7 @@
 import json
 import socket
 import time
-
+import argparse
 import pexpect
 
 
@@ -180,7 +180,11 @@ def count_panic(sockfile):
 
 
 if __name__ == "__main__":
-    ssh_client = SshClient("localhost", 2222, "root", "519ailab")
+    parser = argparse.ArgumentParser()
+    parser.add_argument('ip', type=str, help='qemu ip')
+    parser.add_argument('port', type=str, help='qemu ssh port')
+    args = parser.parse_args()
+    ssh_client = SshClient(args.ip, args.port, "root", "519ailab")
     ssh_client.check_ssh()
     # Qemu is already booted now.
     socketc = SocketClient("/tmp/qmp.sock")
