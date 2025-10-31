@@ -10,9 +10,10 @@ import random
 import time
 
 
-PAGE_SIZE = 4096
-PAGEMAP_ENTRY_BYTES = 8
-PFN_MASK = (1 << 55) - 1
+PAGE_SIZE = os.sysconf("SC_PAGE_SIZE") 
+PAGEMAP_ENTRY_BYTES = struct.calcsize("Q")
+PFN_MASK = ((1 << 55) - 1)
+
 
 
 def find_pids_by_name(comm_name):
