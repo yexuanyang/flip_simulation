@@ -3,7 +3,7 @@ import socket
 import time
 import argparse
 import pexpect
-
+import sys
 
 class SocketClient:
     def __init__(
@@ -52,22 +52,25 @@ class SocketClient:
         """Listen the socket server and get the response, check if guest is paniced."""
         buffer = ""
         print("socket connection start listening...")
-        while True:
-            data = self.sock.recv(1024)
-            if not data:
-                # qemu shutdown
-                break
-            buffer += data.decode()
-            # parse the response data to json objects
-            results, buffer = parse_json_objects(buffer)
-            # iterate all objects
-            for res in results:
-                print(res)
-                if res.get("event", "") == "GUEST_PANICKED":
-                    self.panic += 1
-                    if self.need_revert:
-                        # revert to the snapshot.
-                        self.monitor.send_command("loadvm " + self.snapname)
+        try:
+            while True:
+                data = self.sock.recv(1024)
+                if not data:
+                    # qemu shutdown
+                    break
+                buffer += data.decode()
+                # parse the response data to json objects
+                results, buffer = parse_json_objects(buffer)
+                # iterate all objects
+                for res in results:
+                    print(res)
+                    if res.get("event", "") == "GUEST_PANICKED":
+                        self.panic += 1
+                        if self.need_revert:
+                            # revert to the snapshot.
+                            self.monitor.send_command("loadvm " + self.snapname)
+        except Exception:
+            return
 
     def __del__(self):
         """Clean the socket and monitor.
@@ -183,11 +186,12 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument('ip', type=str, help='qemu ip')
     parser.add_argument('port', type=str, help='qemu ssh port')
+    parser.add_argument("qmp", type=str, help='qmp socket file')
     args = parser.parse_args()
     ssh_client = SshClient(args.ip, args.port, "root", "519ailab")
     ssh_client.check_ssh()
     # Qemu is already booted now.
-    socketc = SocketClient("/tmp/qmp.sock")
+    socketc = SocketClient(args.qmp)
     socketc.send('{"execute": "qmp_capabilities"}')
     socketc.listen()
     print("panic count: " + str(socketc.panic))

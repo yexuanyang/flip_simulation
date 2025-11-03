@@ -345,6 +345,7 @@ def snapinject(args):
         print("Create a tmp checkpoint %s" % snapname)
     else:
         qemu_hmp("loadvm %s" % snapname)
+        qemu_hmp("cont")
         print("Load checkpoint %s" % snapname)
 
     stime = time.time()
