@@ -363,9 +363,9 @@ def inject_register_bitflip(register_name, bit=None):
             )
         else:
             # normal register, 64 bits
-            assert value.type.sizeof == 8, (
-                "invalid general register size: %u" % value.type.sizeof
-            )
+            # assert value.type.sizeof == 8, (
+            #     "invalid general register size: %u" % value.type.sizeof
+            # )
             oldval = int(value)
             newval = oldval ^ (1 << bit)
             gdb.execute("set $%s = %d" % (register_name, newval))

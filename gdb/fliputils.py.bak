@@ -13,9 +13,10 @@ current_dir = os.path.dirname(os.path.abspath(__file__))
 if current_dir not in sys.path:
     sys.path.insert(0, current_dir)
 
+from parser import parse_args_safely
+
 from buildcmd import BuildCmd
 from logger import init_logger
-from parser import parse_args_safely
 from qemu_utils import *
 
 
@@ -224,70 +225,12 @@ def autoinject(args):
 
 
 @BuildCmd
-def inject_range(args):
-    """Inject bitflips at addresses within specified ranges."""
-
-    args = args.strip().split(" ")
-    if len(args) < 3:
-        print(
-            "usage: inject_range <bytewidth> <mode> <range1> [<range2> ...] [<num_errors>]"
-        )
-        print("Each range should be specified as start-end (e.g., 0x1000-0x1FFF)")
-        print(
-            "Mode should be 'sequential' or 'random'. If 'random', specify the number of errors to inject."
-        )
-        return
-
-    bytewidth = int(args[0])
-    mode = args[1]
-    if bytewidth < 1:
-        print("invalid bytewidth")
-        return
-
-    ranges = []
-    for arg in args[2:]:
-        if "-" in arg:
-            try:
-                start, end = map(lambda x: int(x, 16), arg.split("-"))
-                if start >= end:
-                    raise ValueError
-                ranges.append((start, end))
-            except ValueError:
-                print(f"invalid range: {arg}")
-                return
-        else:
-            num_errors = int(arg)
-
-    if mode == "sequential":
-        for start, end in ranges:
-            for address in range(start, end + 1, bytewidth):
-                inject_bitflip(address, bytewidth)
-    elif mode == "random":
-        if "num_errors" not in locals():
-            print(
-                "usage: inject_range <bytewidth> random <range1> [<range2> ...] <num_errors>"
-            )
-            return
-        all_addresses = []
-        for start, end in ranges:
-            all_addresses.extend(range(start, end + 1, bytewidth))
-        if num_errors > len(all_addresses):
-            print("Number of errors exceeds the number of available addresses.")
-            return
-        random_addresses = random.sample(all_addresses, num_errors)
-        for address in random_addresses:
-            inject_bitflip(address, bytewidth)
-    else:
-        print("Invalid mode. Use 'sequential' or 'random'.")
-
-
-@BuildCmd
 def snapinject(args):
     """Record the current VM state, then automatically inject faults according to the user-provided fault count, fault location, and fault interval.
     After the faults are injected, wait for a while and then revert to the previous VM state, delete the tmp checkpoint.
-    Usage: snapinject --total-fault-number <num> --min-interval <time> --max-interval <time> --fault-type <type> --fault-location <location> --bit-index <bit> --observe-time <time> [--snapshot-tag <tag>] [--register-category <category>] [--bytewidth <width>]
+    Usage: snapinject --total-fault-number <num> --min-interval <time> --max-interval <time> --fault-type <type> --fault-location <location> --bit-index <bit> --observe-time <time> [--snapshot-tag <tag>] [--register-category <category>]
     Example:
-        snapinject --total-fault-number 10 --min-interval 100ms --max-interval 200ms --fault-type ram --fault-location 0x00500000 --bit-index 1 --observe-time 10s --bytewidth 4
+        snapinject --total-fault-number 10 --min-interval 100ms --max-interval 200ms --fault-type ram --fault-location 0x00500000 --bit-index 1 --observe-time 10s
         snapinject --total-fault-number 10 --min-interval 100ms --max-interval 100ms --fault-type reg --fault-location pc --bit-index 3 --observe-time 10s --snapshot-tag my_snapshot
         snapinject --total-fault-number 10 --min-interval 100ms --max-interval 100ms --fault-type reg --register-category general --bit-index 3 --observe-time 10s --snapshot-tag my_snapshot
 
@@ -339,12 +282,6 @@ def snapinject(args):
         "--bit-index", type=int, required=False, help="Bit index to flip"
     )
     parser.add_argument(
-        "--bytewidth",
-        type=int,
-        default=1,
-        help="Byte width for RAM fault injection (default: 1)",
-    )
-    parser.add_argument(
         "--observe-time",
         required=True,
         help="Time to observe after injection (with unit: ns, us, ms, s, m)",
@@ -384,7 +321,6 @@ def snapinject(args):
     location = getattr(parsed, "fault_location")
     bit_index = getattr(parsed, "bit_index")
     register_category = getattr(parsed, "register_category")
-    bytewidth = getattr(parsed, "bytewidth")
 
     if (location is None and bit_index is not None) and (
         location is not None and bit_index is None
@@ -399,11 +335,6 @@ def snapinject(args):
         print(
             "Error: --register-category and --fault-location cannot be used together when fault-type is 'reg'. Use either specific register name or register category."
         )
-        return
-
-    # 验证 bytewidth 参数的有效性
-    if bytewidth < 1:
-        print("Error: --bytewidth must be >= 1")
         return
 
     snapname = (
@@ -428,8 +359,8 @@ def snapinject(args):
                 try:
                     address = int(location, 16)
                     inject_bitflip(
-                        address, bytewidth, bit_index
-                    )  # Use specified byte width and bit_index
+                        address, 1, bit_index
+                    )  # Use 1 byte width and specify bit_index
                 except ValueError as e:
                     print("Error parsing RAM address: %s" % str(e))
                     return
@@ -871,17 +802,17 @@ def categorize_aarch64_registers():
     # 定义 AArch64 通用寄存器
     general_register_patterns = [
         # x0-x30 通用寄存器
-        r"^x([0-9]|[12][0-9]|30)$",
+        r'^x([0-9]|[12][0-9]|30)$',
         # 程序计数器
-        r"^pc$",
+        r'^pc$',
         # 栈指针
-        r"^sp$",
+        r'^sp$',
         # 程序状态寄存器
-        r"^cpsr$",
+        r'^cpsr$',
         # 浮点状态寄存器
-        r"^fpsr$",
+        r'^fpsr$',
         # 浮点控制寄存器
-        r"^fpcr$",
+        r'^fpcr$'
     ]
 
     # 获取所有可用寄存器
@@ -915,14 +846,12 @@ def inject_reg_by_category(category, bit=None):
     """
     general_regs, control_regs = categorize_aarch64_registers()
 
-    if category == "general":
+    if category == 'general':
         target_registers = general_regs
-    elif category == "control":
+    elif category == 'control':
         target_registers = control_regs
     else:
-        print(
-            f"Error: Invalid register category '{category}'. Must be 'general' or 'control'."
-        )
+        print(f"Error: Invalid register category '{category}'. Must be 'general' or 'control'.")
         return
 
     if not target_registers:
