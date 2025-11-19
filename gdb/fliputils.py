@@ -285,11 +285,12 @@ def inject_range(args):
 def snapinject(args):
     """Record the current VM state, then automatically inject faults according to the user-provided fault count, fault location, and fault interval.
     After the faults are injected, wait for a while and then revert to the previous VM state, delete the tmp checkpoint.
-    Usage: snapinject --total-fault-number <num> --min-interval <time> --max-interval <time> --fault-type <type> --fault-location <location> --bit-index <bit> --observe-time <time> [--snapshot-tag <tag>] [--register-category <category>] [--bytewidth <width>]
+    Usage: snapinject --total-fault-number <num> --min-interval <time> --max-interval <time> --fault-type <type> --fault-location <location> --bit-index <bit> --observe-time <time> [--snapshot-tag <tag>] [--register-category <category>] [--bytewidth <width>] [--no-snapshot]
     Example:
         snapinject --total-fault-number 10 --min-interval 100ms --max-interval 200ms --fault-type ram --fault-location 0x00500000 --bit-index 1 --observe-time 10s --bytewidth 4
         snapinject --total-fault-number 10 --min-interval 100ms --max-interval 100ms --fault-type reg --fault-location pc --bit-index 3 --observe-time 10s --snapshot-tag my_snapshot
         snapinject --total-fault-number 10 --min-interval 100ms --max-interval 100ms --fault-type reg --register-category general --bit-index 3 --observe-time 10s --snapshot-tag my_snapshot
+        snapinject --total-fault-number 10 --min-interval 100ms --max-interval 200ms --fault-type ram --fault-location 0x00500000 --bit-index 1 --observe-time 10s --bytewidth 4 --no-snapshot
 
     Supported time units: default is ns. Time format: 10s, 244ms and etc.
     1. ns: nanosecond
@@ -363,6 +364,11 @@ def snapinject(args):
         choices=["general", "control"],
         help="Register category for fault injection when fault-type is 'reg'. 'general' includes x0-x30, pc, sp, cpsr, fpsr, fpcr. 'control' includes all other registers. If not specified, all registers are considered.",
     )
+    parser.add_argument(
+        "--no-snapshot",
+        action="store_true",
+        help="If specified, do not create/load/restore snapshots. Just inject faults and observe.",
+    )
 
     parsed = parse_args_safely(parser, args)
     if parsed is None:
@@ -385,6 +391,7 @@ def snapinject(args):
     bit_index = getattr(parsed, "bit_index")
     register_category = getattr(parsed, "register_category")
     bytewidth = getattr(parsed, "bytewidth")
+    no_snapshot = getattr(parsed, "no_snapshot")
 
     if (location is None and bit_index is not None) and (
         location is not None and bit_index is None
@@ -406,16 +413,23 @@ def snapinject(args):
         print("Error: --bytewidth must be >= 1")
         return
 
-    snapname = (
-        getattr(parsed, "snapshot_tag") if getattr(parsed, "snapshot_tag") else tmpname
-    )
-    if snapname == tmpname:
-        qemu_hmp("savevm %s" % snapname)
-        print("Create a tmp checkpoint %s" % snapname)
+    # 处理快照逻辑
+    snapname = None
+    if not no_snapshot:
+        snapname = (
+            getattr(parsed, "snapshot_tag")
+            if getattr(parsed, "snapshot_tag")
+            else tmpname
+        )
+        if snapname == tmpname:
+            qemu_hmp("savevm %s" % snapname)
+            print("Create a tmp checkpoint %s" % snapname)
+        else:
+            qemu_hmp("loadvm %s" % snapname)
+            qemu_hmp("cont")
+            print("Load checkpoint %s" % snapname)
     else:
-        qemu_hmp("loadvm %s" % snapname)
-        qemu_hmp("cont")
-        print("Load checkpoint %s" % snapname)
+        print("Snapshot disabled, injecting faults without snapshot.")
 
     stime = time.time()
     if location is None and bit_index is None and register_category is None:
@@ -451,13 +465,14 @@ def snapinject(args):
     step_ns(obtime)
     print("time up.")
 
-    if snapname == tmpname:
-        # Revert to the previous VM state
-        qemu_hmp("loadvm %s" % snapname)
-        print("Back to checkpoint %s finished." % snapname)
-        # Del this tmp VM checkpoint
-        qemu_hmp("delvm %s" % tmpname)
-        print("Delete tmp VM checkpoint")
+    if not no_snapshot and snapname:
+        if snapname == tmpname:
+            # Revert to the previous VM state
+            qemu_hmp("loadvm %s" % snapname)
+            print("Back to checkpoint %s finished." % snapname)
+            # Del this tmp VM checkpoint
+            qemu_hmp("delvm %s" % tmpname)
+            print("Delete tmp VM checkpoint")
 
     # Send a ret to qemu serial, make sure prompt is back
     send_to_qemu_serial("\r", parsed.serial_socket)
