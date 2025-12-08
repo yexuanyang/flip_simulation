@@ -24,7 +24,7 @@ Simulate the random bits flip in qemu guest machine with gdb.
 
 ## Clone this repo in somewhere
 
-Run `git clone https://github.com/yexuanyang/flip_simulation.git` or `git clone git@github.com:yexuanyang/flip_simulation.git`
+Run `git clone https://github.com/SysKui/flip_simulation.git`
 
 Store the repo somewhere.
 
@@ -47,6 +47,12 @@ make -j$(nproc)
 make install
 qemu-system-aarch64 --version
 ```
+
+Note: The stable version QEMU 9.2.x is also usable and recommended, read the reference to install.
+
+Reference: 
+1. [QEMU Download](https://www.qemu.org/download/)
+2. [QEMU Build Dependency](https://wiki.qemu.org/Hosts/Linux)
 
 ### Make kernel with this config (one optional way to support 9p)
 
